@@ -206,7 +206,7 @@ def main():
 
     #Api Key to update
 
-    api = RiotAPI('RGAPI-3066becf-6a08-47a9-b0c3-4dd20fe12d65')
+    api = RiotAPI('API KEY GOES HERE')
 
 
 
