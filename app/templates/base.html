@@ -1,0 +1,31 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - microblog</title>
+    {% else %}
+    <title>Duostats</title>
+    {% endif %}
+
+<style>
+body {
+        background-image: url("http://localhost:5000/static/SR.jpg");
+	background-size: 100%;
+} 
+ 
+</style>
+  </head>
+  <body bgcolor="#FEFCFF">
+    <div>Microblog: <a href="/index">Home</a></div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </body>
+</html>

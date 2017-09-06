@@ -1,0 +1,26 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Sign In</h1>
+  <form action="" method="post" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          Please enter your Name:<br>
+          {{ form.summoner1(size=80) }}<br>
+          {% for error in form.summoner1.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p>
+          Please enter your Partner's Name:<br>
+          {{ form.summoner2(size=80) }}<br>
+          {% for error in form.summoner2.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+
+      <p><input type="submit" value="Sign In"></p>
+      <p>{{ form.region }} Select Region</p>
+  </form>
+{% endblock %}
