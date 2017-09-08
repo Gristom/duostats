@@ -1,4 +1,4 @@
-#!root/flask/bin/python3.6
+#!usr/local/bin/python3.6
 from flask import render_template, flash, redirect
 from app import app, db, RiotConsts
 from .forms import LoginForm
