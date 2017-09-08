@@ -1,4 +1,4 @@
-#!usr/local/bin/python3.6
+#!/usr/local/bin/python3.6
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
