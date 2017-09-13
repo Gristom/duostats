@@ -2287,7 +2287,7 @@ def login():
         #flash(p2soloplayedchampscount)
             
         return redirect('/stats')
-    return render_template('login.html',
+    return render_template('index.html',
                             title='Sign In',
                             form=form)
 
