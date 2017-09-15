@@ -583,8 +583,8 @@ def login():
 
         dbmatchlist2 = []
 
-        matchhistorydb = User.query.filter(User.summoner1id.startswith(sum1id), User.summoner2id.startswith(sum2id), User.season.startswith(9)).all()
-       
+        #matchhistorydb = User.query.filter(User.summoner1id.startswith(sum1id), User.summoner2id.startswith(sum2id), User.season.startswith(9)).all()
+        matchhistorydb = []      
 
 
         #Mine out match history list from db (then mine out stats to do)
