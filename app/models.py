@@ -6,7 +6,7 @@ class User(db.Model):
     keyindex = db.Column(db.Integer, primary_key=True)
     summoner1id = db.Column(db.Integer, index=True)
     summoner2id = db.Column(db.Integer, index=True)
-    matchid = db.Column(db.Integer, index=True)
+    gameid = db.Column(db.Integer, index=True)
     season = db.Column(db.Integer, index=True)
     regioncode = db.Column(db.String(10), index=True)
     winorlose = db.Column(db.Integer, index=True) #(0=lose 1=win 2=remake)
