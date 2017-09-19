@@ -590,7 +590,7 @@ def login():
 
         for i in range(len(matchhistorydb)):
 
-            dbmatchlistcommon.append(matchhistorydb[i].matchid)
+            dbmatchlistcommon.append(int(matchhistorydb[i].matchid))
 
             if matchhistorydb[i].winorlose == 2 and matchhistorydb[i].regioncode == form.region.data:
 
