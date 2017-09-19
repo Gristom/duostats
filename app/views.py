@@ -905,7 +905,7 @@ def login():
 
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistcommon[i], regioncode=form.region.data, season=9, winorlose=2, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
                     
                     gamecountcommon=gamecountcommon
 
@@ -949,7 +949,7 @@ def login():
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistcommon[i], regioncode=form.region.data, season=9, winorlose=1, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                     
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
                     wincountcommon=wincountcommon+1
                     gamecountcommon=gamecountcommon+1
@@ -988,7 +988,7 @@ def login():
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistcommon[i], regioncode=form.region.data, season=9, winorlose=0, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                     
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
                     
                     gamecountcommon=gamecountcommon+1
@@ -1075,7 +1075,7 @@ def login():
 
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistsolo1[i], regioncode=form.region.data, season=9, winorlose=2, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
                     gamecountp1solo=gamecountp1solo
 
@@ -1093,7 +1093,7 @@ def login():
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistsolo1[i], regioncode=form.region.data, season=9, winorlose=1, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
                 
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
 
                     p1solowinchamps.append(j1['participants'][pid1-1]['championId'])
@@ -1122,7 +1122,7 @@ def login():
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistsolo1[i], regioncode=form.region.data, season=9, winorlose=0, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
                 
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
                     gamecountp1solo=gamecountp1solo+1
 
@@ -1210,7 +1210,7 @@ def login():
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistsolo2[i], regioncode=form.region.data, season=9, winorlose=2, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
                     gamecountp2solo=gamecountp2solo
 
@@ -1235,7 +1235,7 @@ def login():
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistsolo2[i], regioncode=form.region.data, season=9, winorlose=1, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
 
                     
@@ -1257,7 +1257,7 @@ def login():
                     u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=matchlistsolo2[i], regioncode=form.region.data, season=9, winorlose=0, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                     db.session.add(u)
-                    db.session.commit()
+                    #db.session.commit()
 
 
                     gamecountp2solo=gamecountp2solo+1
