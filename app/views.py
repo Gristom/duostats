@@ -2230,8 +2230,8 @@ def login():
         p1delta = winpercentcommon-winpercentp1solo
         p2delta = winpercentcommon-winpercentp2solo
 
-        p1delta = long(p1delta)
-        p2delta = long(p2delta)
+        p1delta = float(p1delta)
+        p2delta = float(p2delta)
 
         if p1delta == 0:
 
