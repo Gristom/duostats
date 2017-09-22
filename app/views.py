@@ -2246,7 +2246,7 @@ def login():
 
             p1deltaarrow = "Pos"
 
-        elif p1deltaarrow < 0:
+        elif p1delta < 0:
 
             p1deltaarrow = "Neg"
 
@@ -2270,7 +2270,7 @@ def login():
 
             p2deltaarrow = "Pos"
 
-        elif p2deltaarrow < 0:
+        elif p2delta < 0:
 
             p2deltaarrow = "Neg"
 
