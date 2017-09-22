@@ -2227,8 +2227,8 @@ def login():
         p1deltaarrow = ""
         p2deltaarrow = ""
 
-        p1delta = winpercentcommon-winpercentp1solo
-        p2delta = winpercentcommon-winpercentp2solo
+        p1delta = int(winpercentcommon-winpercentp1solo)
+        p2delta = int(winpercentcommon-winpercentp2solo)
 
         if p1delta == 0:
 
