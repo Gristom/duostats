@@ -962,7 +962,7 @@ def login():
                     losechamps1.append(j1['participants'][pid1-1]['championId'])
                     losechamps2.append(j1['participants'][pid2-1]['championId'])
 
-                    losechampscommon.append(j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId'])
+                    losechampscommon.append(str(j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']))
 
                     playedchampscommon.append(str(j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']))
 
