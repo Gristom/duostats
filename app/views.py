@@ -2108,8 +2108,6 @@ def login():
             solokda1commonoutput.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
             solokda2commonoutput.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
 
-            solop1solowroutput.append(str(Decimal((p1solowinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            solop2solowroutput.append(str(Decimal((p2solowinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
 
             sologp1.append(p1soloplayedchampscount[c1common[i]])
             sologp1output.append(str(p1soloplayedchampscount[c1common[i]])+" Played")
@@ -2141,15 +2139,49 @@ def login():
             allkda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
 
 
-            allp1allwroutput.append(str(Decimal((p1allwinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            allp2allwroutput.append(str(Decimal((p2allwinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-
 
             allgpall1.append(p1allplayedchampscount[c1common[i]])
             allgpall1output.append(str(p1allplayedchampscount[c1common[i]])+" Played")
             
             allgpall2.append(p2allplayedchampscount[c2common[i]])            
             allgpall2output.append(str(p2allplayedchampscount[c2common[i]])+" Played")
+
+
+            
+            
+
+            try:
+                solop1solowroutput.append(str(Decimal((p1solowinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except ZeroDivisionError:
+                solop1solowroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except KeyError:
+                solop1solowroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+
+            try:
+                solop2solowroutput.append(str(Decimal((p2solowinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except ZeroDivisionError:
+                solop2solowroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except KeyError:
+                solop2solowroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+
+
+
+            try:
+                allp1allwroutput.append(str(Decimal((p1allwinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except ZeroDivisionError:
+                allp1allwroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except KeyError:
+                allp1allwroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+
+            try:
+                allp2allwroutput.append(str(Decimal((p2allwinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except ZeroDivisionError:
+                allp2allwroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            except KeyError:
+                allp2allwroutput.append(str(0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+
+
+
 
         for i in range(len(p1soloplayedchampskeys)):
 
