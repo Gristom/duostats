@@ -67,7 +67,7 @@ def stats():
             'winpercentp2all': str(Decimal(winpercentp2all).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)), 'p1delta': str(Decimal(p1delta).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)), 'p2delta': str(Decimal(p2delta).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)), 'p1deltaarrow': p1deltaarrow,
             'p2deltaarrow': p2deltaarrow}
 
-    for i in range(xmax):
+    for i in range(c1common):
     
         posts.append(
             { 
