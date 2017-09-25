@@ -399,6 +399,9 @@ def login():
         global solokda1commonoutput
         global solokda2commonoutput
 
+        global solokda1common
+        global solokda2common
+
         global solokda1
         global solokda2
 
@@ -441,6 +444,9 @@ def login():
         global sologp2
         global sologp1output
         global sologp2output
+
+        global allkda1common
+        global allkda2common
 
 
 
@@ -1443,6 +1449,12 @@ def login():
 
         solokda1commonoutput2 = []
         solokda2commonoutput2 = []
+
+        solokda1common = []
+        solokda2common = []
+
+        allkda1common = []
+        allkda2common = []
         
 
         allk1common = []
