@@ -2183,14 +2183,14 @@ def login():
             #except ZeroDivisionError:
                 #solop1solowroutput.append("")
             except KeyError:
-                solop1solowroutput.append("")
+                solop1solowroutput.append(None)
 
             try:
                 solop2solowroutput.append(str(Decimal((p2solowinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             #except ZeroDivisionError:
                 #solop2solowroutput.append("")
             except KeyError:
-                solop2solowroutput.append("")
+                solop2solowroutput.append(None)
 
 
 
@@ -2199,14 +2199,14 @@ def login():
             #except ZeroDivisionError:
                 #allp1allwroutput.append("")
             except KeyError:
-                allp1allwroutput.append("")
+                allp1allwroutput.append(None)
 
             try:
                 allp2allwroutput.append(str(Decimal((p2allwinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             #except ZeroDivisionError:
                 #allp2allwroutput.append("")
             except KeyError:
-                allp2allwroutput.append("")
+                allp2allwroutput.append(None)
 
 
 
