@@ -919,9 +919,9 @@ def login():
                     winchamps1.append(j1['participants'][pid1-1]['championId'])
                     winchamps2.append(j1['participants'][pid2-1]['championId'])
 
-                    winchampscommon.append(str([j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']]))
+                    winchampscommon.append(str(j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']))
 
-                    playedchampscommon.append(str([j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']]))
+                    playedchampscommon.append(str(j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']))
 
                     p1winchampsduo.append(j1['participants'][pid1-1]['championId'])
                     p2winchampsduo.append(j1['participants'][pid2-1]['championId']) 
@@ -962,9 +962,9 @@ def login():
                     losechamps1.append(j1['participants'][pid1-1]['championId'])
                     losechamps2.append(j1['participants'][pid2-1]['championId'])
 
-                    losechampscommon.append([j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']])
+                    losechampscommon.append(j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId'])
 
-                    playedchampscommon.append(str([j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']]))
+                    playedchampscommon.append(str(j1['participants'][pid1-1]['championId'], j1['participants'][pid2-1]['championId']))
 
                     p1champsduo.append(j1['participants'][pid1-1]['championId'])
                     p2champsduo.append(j1['participants'][pid2-1]['championId']) 
