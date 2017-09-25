@@ -2087,34 +2087,62 @@ def login():
             kda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
 
 
+            try:
+
+                solokda1common.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solokda2common.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                
+                solokda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+                solokda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+
+                solok1common.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solok2common.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+                solod1common.append(str(Decimal(cl1[c1common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solod2common.append(str(Decimal(cl2[c2common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+                soloa1common.append(str(Decimal(cl1[c1common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                soloa2common.append(str(Decimal(cl2[c2common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
 
 
-            solokda1common.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-            solokda2common.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-            
-            solokda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-            solokda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-
-            solok1common.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-            solok2common.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            solod1common.append(str(Decimal(cl1[c1common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-            solod2common.append(str(Decimal(cl2[c2common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            soloa1common.append(str(Decimal(cl1[c1common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-            soloa2common.append(str(Decimal(cl2[c2common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solokda1commonoutput.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solokda2commonoutput.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
 
 
-            solokda1commonoutput.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-            solokda2commonoutput.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                sologp1.append(p1soloplayedchampscount[c1common[i]])
+                sologp1output.append(str(p1soloplayedchampscount[c1common[i]])+" Played")
+
+                sologp2.append(p2soloplayedchampscount[c2common[i]])
+                sologp2output.append(str(p2soloplayedchampscount[c2common[i]])+" Played")
+
+            except KeyError:
 
 
-            sologp1.append(p1soloplayedchampscount[c1common[i]])
-            sologp1output.append(str(p1soloplayedchampscount[c1common[i]])+" Played")
+                solokda1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solokda2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                
+                solokda1commonoutput2.append(str((0/0/0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+                solokda2commonoutput2.append(str((0/0/0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
 
-            sologp2.append(p2soloplayedchampscount[c2common[i]])
-            sologp2output.append(str(p2soloplayedchampscount[c2common[i]])+" Played")            
+                solok1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solok2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
 
+                solod1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solod2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+                soloa1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                soloa2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+
+                solokda1commonoutput.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solokda2commonoutput.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+
+                sologp1.append(0)
+                sologp1output.append(str(0)+" Played")
+
+                sologp2.append(0)
+                sologp2output.append(str(0)+" Played")
             
 
 
