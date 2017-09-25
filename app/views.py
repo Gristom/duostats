@@ -141,9 +141,43 @@ def stats():
                 'gp1output': gp1output[i],                
                 'gp2output': gp2output[i],
                 'gpall1output': gpall1output[i], 
-                'gpall2output': gpall2output[i] 
-
-
+                'gpall2output': gpall2output[i],
+                'solok1common': solok1common[i],
+                'solok2common': solok2common[i],
+                'solod1common': solod1common[i],
+                'solod2common': solod2common[i],            
+                'soloa1common': soloa1common[i],
+                'soloa2common': soloa2common[i],
+                'solokda1commonoutput': solokda1commonoutput[i],
+                'solokda2commonoutput': solokda2commonoutput[i],
+                'solokda1common': solokda1common[i],
+                'solokda2common': solokda2common[i],
+                'solokda1commonoutput2': solokda1commonoutput2[i],
+                'solokda2commonoutput2': solokda2commonoutput2[i],
+                'solop1solowroutput': solop1solowroutput[i],
+                'solop2solowroutput': solop2solowroutput[i],
+                'allk1common': allk1common[i],
+                'allk2common': allk2common[i],
+                'alld1common': alld1common[i],
+                'alld2common': alld2common[i],            
+                'alla1common': alla1common[i],
+                'alla2common': alla2common[i],
+                'allkda1commonoutput': allkda1commonoutput[i],
+                'allkda2commonoutput': allkda2commonoutput[i],
+                'allkda1common': allkda1common[i],
+                'allkda2common': allkda2common[i],
+                'allkda1commonoutput2': allkda1commonoutput2[i],
+                'allkda2commonoutput2': allkda2commonoutput2[i],
+                'allp1allwroutput': allp1allwroutput[i],
+                'allp2allwroutput': allp2allwroutput[i],
+                'allgpall1': allgpall1[i],
+                'allgpall2': allgpall2[i],
+                'allgpall1output': allgpall1output[i],
+                'allgpall2output': allgpall2output[i],
+                'sologp1': sologp1[i],
+                'sologp2': sologp2[i],
+                'sologp1output': sologp1output[i],
+                'sologp2output': sologp2output[i]                
                 
             }
 
@@ -352,6 +386,64 @@ def login():
 
         global p1delta
         global p2delta
+
+        global solok1common
+        global solok2common
+
+        global solod1common
+        global solod2common
+
+        global soloa1common
+        global soloa2common
+
+        global solokda1commonoutput
+        global solokda2commonoutput
+
+        global solokda1
+        global solokda2
+
+        global solokda1commonoutput2
+        global solokda2commonoutput2
+        
+
+        global allk1common
+        global allk2common
+
+        global alld1common
+        global alld2common
+
+        global alla1common
+        global alla2common
+
+
+        global allkda1commonoutput
+        global allkda2commonoutput
+
+        global allkda1
+        global allkda2
+
+        global allkda1commonoutput2
+        global allkda2commonoutput2
+
+
+        global solop1solowroutput
+        global solop2solowroutput
+
+        global allp1allwroutput
+        global allp2allwroutput
+
+        global allgpall1
+        global allgpall1output
+        global allgpall2
+        global allgpall2output
+
+        global sologp1
+        global sologp2
+        global sologp1output
+        global sologp2output
+
+
+
 
         winpercentcommon = 0
         winpercentp1solo = 0
@@ -1334,6 +1426,60 @@ def login():
         p1win = {}
         p2win = {}
 
+        solok1common = []
+        solok2common = []
+
+        solod1common = []
+        solod2common = []
+
+        soloa1common = []
+        soloa2common = []
+
+        solokda1commonoutput = []
+        solokda2commonoutput = []
+
+        solokda1 = []
+        solokda2 = []
+
+        solokda1commonoutput2 = []
+        solokda2commonoutput2 = []
+        
+
+        allk1common = []
+        allk2common = []
+
+        alld1common = []
+        alld2common = []
+
+        alla1common = []
+        alla2common = []
+
+
+        allkda1commonoutput = []
+        allkda2commonoutput = []
+
+        allkda1 = []
+        allkda2 = []
+
+        allkda1commonoutput2 = []
+        allkda2commonoutput2 = []
+
+
+        solop1solowroutput = []
+        solop2solowroutput = []
+
+        allp1allwroutput = []
+        allp2allwroutput = []
+
+        allgpall1 = [] 
+        allgpall1output = []
+        allgpall2 = []
+        allgpall2output = []
+
+        sologp1 = []
+        sologp2 = []
+        sologp1output = []
+        sologp2output = []
 
         #solo stats
 
@@ -1929,6 +2075,69 @@ def login():
             kda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
 
 
+
+
+            solokda1common.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            solokda2common.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            
+            solokda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+            solokda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+
+            solok1common.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            solok2common.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+            solod1common.append(str(Decimal(cl1[c1common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            solod2common.append(str(Decimal(cl2[c2common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+            soloa1common.append(str(Decimal(cl1[c1common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            soloa2common.append(str(Decimal(cl2[c2common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+
+            solokda1commonoutput.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            solokda2commonoutput.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+            solop1solowroutput.append(str(Decimal((p1solowinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            solop2solowroutput.append(str(Decimal((p2solowinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+
+            sologp1.append(p1soloplayedchampscount[c1common[i]])
+            sologp1output.append(str(p1soloplayedchampscount[c1common[i]])+" Played")
+
+            sologp2.append(p2soloplayedchampscount[c2common[i]])
+            sologp2output.append(str(p2soloplayedchampscount[c2common[i]])+" Played")            
+
+            
+
+
+            allk1common.append(str(Decimal(cl1[c1common[i]]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            allk2common.append(str(Decimal(cl2[c2common[i]]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+            alld1common.append(str(Decimal(cl1[c1common[i]]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            alld2common.append(str(Decimal(cl2[c2common[i]]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+            alla1common.append(str(Decimal(cl1[c1common[i]]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            alla2common.append(str(Decimal(cl2[c2common[i]]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+
+            allkda1commonoutput.append(str(Decimal(cl1[c1common[i]]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[c1common[i]]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            allkda2commonoutput.append(str(Decimal(cl2[c2common[i]]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[c2common[i]]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+
+
+            allkda1common.append(str(Decimal(cl1[c1common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            allkda2common.append(str(Decimal(cl2[c2common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            
+            allkda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+            allkda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+
+
+            allp1allwroutput.append(str(Decimal((p1allwinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            allp2allwroutput.append(str(Decimal((p2allwinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+
+
+            allgpall1.append(p1allplayedchampscount[c1common[i]])
+            allgpall1output.append(str(p1allplayedchampscount[c1common[i]])+" Played")
+            
+            allgpall2.append(p2allplayedchampscount[c2common[i]])            
+            allgpall2output.append(str(p2allplayedchampscount[c2common[i]])+" Played")
 
         for i in range(len(p1soloplayedchampskeys)):
 
