@@ -2180,33 +2180,33 @@ def login():
 
             try:
                 solop1solowroutput.append(str(Decimal((p1solowinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            #except ZeroDivisionError:
-                #solop1solowroutput.append("")
+            except ZeroDivisionError:
+                solop1solowroutput.append("")
             except KeyError:
-                solop1solowroutput.append(None)
+                solop1solowroutput.append("")
 
             try:
                 solop2solowroutput.append(str(Decimal((p2solowinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            #except ZeroDivisionError:
-                #solop2solowroutput.append("")
+            except ZeroDivisionError:
+                solop2solowroutput.append("")
             except KeyError:
-                solop2solowroutput.append(None)
+                solop2solowroutput.append("")
 
 
 
             try:
                 allp1allwroutput.append(str(Decimal((p1allwinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            #except ZeroDivisionError:
-                #allp1allwroutput.append("")
+            except ZeroDivisionError:
+                allp1allwroutput.append("")
             except KeyError:
-                allp1allwroutput.append(None)
+                allp1allwroutput.append("")
 
             try:
                 allp2allwroutput.append(str(Decimal((p2allwinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            #except ZeroDivisionError:
-                #allp2allwroutput.append("")
+            except ZeroDivisionError:
+                allp2allwroutput.append("")
             except KeyError:
-                allp2allwroutput.append(None)
+                allp2allwroutput.append("")
 
 
 
@@ -2399,108 +2399,108 @@ def login():
 ##
 ##        winpercentp2all = wincountp2all/gamecountp2all*100
 
-        xgpcommon = len(gpcommon)
-        xgp1 = len(gp1)
-        xgp2 = len(gp2)
-        xgpall1 = len(gpall1)
-        xgpall2 = len(gpall2)
-
-        xmax = max(len(gp1), len(gp2), len(gpcommon), len(gpall1), len(gpall2))
-
-
-        while xmax > xgpcommon:
-
-            gpcommon.append("")
-            c1namecommon.append("")
-            k1common.append("")
-            d1common.append("")
-            a1common.append("")
-            kda1common.append("")
-            c2namecommon.append("")
-            k2common.append("")
-            d2common.append("")
-            a2common.append("")
-            kda2common.append("")
-            commonwr.append("")
-            c1common.append(0)
-            c2common.append(0)
-            kda1commonoutput.append("")
-            kda2commonoutput.append("")
-            kda1commonoutput2.append("")
-            kda2commonoutput2.append("")
-            commonwroutput.append("")
-            gpcommonoutput.append("")
-
-            xgpcommon=xgpcommon+1
-
-        
-        while xmax > xgp1:
-            
-            p1solowr.append("")
-            c1soloname.append("")
-            k1solo.append("")
-            d1solo.append("")
-            a1solo.append("")
-            kda1solo.append("")
-            gp1.append("")
-            p1soloplayedchampskeys.append(0)
-            kda1solooutput.append("")
-            kda1solooutput2.append("")
-            p1solowroutput.append("")
-            gp1output.append("")
-
-            xgp1=xgp1+1
-        
-        while xmax > xgp2:
-            
-            p2solowr.append("")
-            c2soloname.append("")
-            k2solo.append("")
-            d2solo.append("")
-            a2solo.append("")
-            kda2solo.append("")
-            gp2.append("")
-            p2soloplayedchampskeys.append(0)
-            kda2solooutput.append("")
-            kda2solooutput2.append("")
-            p2solowroutput.append("")
-            gp2output.append("")
-
-            xgp2=xgp2+1        
-
-        while xmax > xgpall1:
-            
-            p1allwr.append("")
-            c1allname.append("")
-            k1all.append("")
-            d1all.append("")
-            a1all.append("")
-            kda1all.append("")
-            gpall1.append("")
-            p1allplayedchampskeys.append(0)
-            kda1alloutput.append("")
-            kda1alloutput2.append("")
-            p1allwroutput.append("")
-            gpall1output.append("")
-            
-            xgpall1=xgpall1+1
-        
-        while xmax > xgpall2:
-            
-            p2allwr.append("")
-            c2allname.append("")
-            k2all.append("")
-            d2all.append("")
-            a2all.append("")
-            kda2all.append("")
-            gpall2.append("")
-            p2allplayedchampskeys.append(0)
-            kda2alloutput.append("")
-            kda2alloutput2.append("")
-            p2allwroutput.append("")
-            gpall2output.append("")
-
-            xgpall2=xgpall2+1
+##        xgpcommon = len(gpcommon)
+##        xgp1 = len(gp1)
+##        xgp2 = len(gp2)
+##        xgpall1 = len(gpall1)
+##        xgpall2 = len(gpall2)
+##
+##        xmax = max(len(gp1), len(gp2), len(gpcommon), len(gpall1), len(gpall2))
+##
+##
+##        while xmax > xgpcommon:
+##
+##            gpcommon.append("")
+##            c1namecommon.append("")
+##            k1common.append("")
+##            d1common.append("")
+##            a1common.append("")
+##            kda1common.append("")
+##            c2namecommon.append("")
+##            k2common.append("")
+##            d2common.append("")
+##            a2common.append("")
+##            kda2common.append("")
+##            commonwr.append("")
+##            c1common.append(0)
+##            c2common.append(0)
+##            kda1commonoutput.append("")
+##            kda2commonoutput.append("")
+##            kda1commonoutput2.append("")
+##            kda2commonoutput2.append("")
+##            commonwroutput.append("")
+##            gpcommonoutput.append("")
+##
+##            xgpcommon=xgpcommon+1
+##
+##        
+##        while xmax > xgp1:
+##            
+##            p1solowr.append("")
+##            c1soloname.append("")
+##            k1solo.append("")
+##            d1solo.append("")
+##            a1solo.append("")
+##            kda1solo.append("")
+##            gp1.append("")
+##            p1soloplayedchampskeys.append(0)
+##            kda1solooutput.append("")
+##            kda1solooutput2.append("")
+##            p1solowroutput.append("")
+##            gp1output.append("")
+##
+##            xgp1=xgp1+1
+##        
+##        while xmax > xgp2:
+##            
+##            p2solowr.append("")
+##            c2soloname.append("")
+##            k2solo.append("")
+##            d2solo.append("")
+##            a2solo.append("")
+##            kda2solo.append("")
+##            gp2.append("")
+##            p2soloplayedchampskeys.append(0)
+##            kda2solooutput.append("")
+##            kda2solooutput2.append("")
+##            p2solowroutput.append("")
+##            gp2output.append("")
+##
+##            xgp2=xgp2+1        
+##
+##        while xmax > xgpall1:
+##            
+##            p1allwr.append("")
+##            c1allname.append("")
+##            k1all.append("")
+##            d1all.append("")
+##            a1all.append("")
+##            kda1all.append("")
+##            gpall1.append("")
+##            p1allplayedchampskeys.append(0)
+##            kda1alloutput.append("")
+##            kda1alloutput2.append("")
+##            p1allwroutput.append("")
+##            gpall1output.append("")
+##            
+##            xgpall1=xgpall1+1
+##        
+##        while xmax > xgpall2:
+##            
+##            p2allwr.append("")
+##            c2allname.append("")
+##            k2all.append("")
+##            d2all.append("")
+##            a2all.append("")
+##            kda2all.append("")
+##            gpall2.append("")
+##            p2allplayedchampskeys.append(0)
+##            kda2alloutput.append("")
+##            kda2alloutput2.append("")
+##            p2allwroutput.append("")
+##            gpall2output.append("")
+##
+##            xgpall2=xgpall2+1
 
 
         #Duo Win Rate Impact % and Arrow calcs
