@@ -2118,31 +2118,31 @@ def login():
             except KeyError:
 
 
-                solokda1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-                solokda2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solokda1common.append("")
+                solokda2common.append("")
                 
-                solokda1commonoutput2.append(str((0/0/0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-                solokda2commonoutput2.append(str((0/0/0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+                solokda1commonoutput2.append("")
+                solokda2commonoutput2.append("")
 
-                solok1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-                solok2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solok1common.append("")
+                solok2common.append("")
 
-                solod1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-                solod2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                solod1common.append("")
+                solod2common.append("")
 
-                soloa1common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-                soloa2common.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-
-                solokda1commonoutput.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-                solokda2commonoutput.append(str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str((0).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+                soloa1common.append("")
+                soloa2common.append("")
 
 
-                sologp1.append(0)
-                sologp1output.append(str(0)+" Played")
+                solokda1commonoutput.append("")
+                solokda2commonoutput.append("")
 
-                sologp2.append(0)
-                sologp2output.append(str(0)+" Played")
+
+                sologp1.append("")
+                sologp1output.append("")
+
+                sologp2.append("")
+                sologp2output.append("")
             
 
 
@@ -2181,32 +2181,32 @@ def login():
             try:
                 solop1solowroutput.append(str(Decimal((p1solowinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                solop1solowroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                solop1solowroutput.append("")
             except KeyError:
-                solop1solowroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                solop1solowroutput.append("")
 
             try:
                 solop2solowroutput.append(str(Decimal((p2solowinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                solop2solowroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                solop2solowroutput.append("")
             except KeyError:
-                solop2solowroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                solop2solowroutput.append("")
 
 
 
             try:
                 allp1allwroutput.append(str(Decimal((p1allwinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                allp1allwroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                allp1allwroutput.append("")
             except KeyError:
-                allp1allwroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                allp1allwroutput.append("")
 
             try:
                 allp2allwroutput.append(str(Decimal((p2allwinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                allp2allwroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                allp2allwroutput.append("")
             except KeyError:
-                allp2allwroutput.append(str((0).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+                allp2allwroutput.append("")
 
 
 
