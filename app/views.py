@@ -53,7 +53,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 
-@app.route('/stats')
+@app.route(statsurl)
 def stats():
 
     #Fix
@@ -449,7 +449,7 @@ def login():
         global allkda2common
 
 
-
+        global statsurl
 
         winpercentcommon = 0
         winpercentp1solo = 0
@@ -672,6 +672,8 @@ def login():
         print(r2['accountId'])
 
         sum2id = r2['accountId']
+
+        statsurl = "/stats="+form.summoner1.data+form.summoner2.data
 
 
         dbmatchlistcommon = []
