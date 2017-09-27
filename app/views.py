@@ -2139,10 +2139,10 @@ def login():
 
 
                 sologp1.append("")
-                sologp1output.append("")
+                sologp1output.append("0 Played")
 
                 sologp2.append("")
-                sologp2output.append("")
+                sologp2output.append("0 Played")
             
 
 
@@ -2181,32 +2181,32 @@ def login():
             try:
                 solop1solowroutput.append(str(Decimal((p1solowinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                solop1solowroutput.append("")
+                solop1solowroutput.append("-")
             except KeyError:
-                solop1solowroutput.append("")
+                solop1solowroutput.append("-")
 
             try:
                 solop2solowroutput.append(str(Decimal((p2solowinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                solop2solowroutput.append("")
+                solop2solowroutput.append("-")
             except KeyError:
-                solop2solowroutput.append("")
+                solop2solowroutput.append("-")
 
 
 
             try:
                 allp1allwroutput.append(str(Decimal((p1allwinrate[c1common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                allp1allwroutput.append("")
+                allp1allwroutput.append("-")
             except KeyError:
-                allp1allwroutput.append("")
+                allp1allwroutput.append("-")
 
             try:
                 allp2allwroutput.append(str(Decimal((p2allwinrate[c2common[i]])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
             except ZeroDivisionError:
-                allp2allwroutput.append("")
+                allp2allwroutput.append("-")
             except KeyError:
-                allp2allwroutput.append("")
+                allp2allwroutput.append("-")
 
 
 
