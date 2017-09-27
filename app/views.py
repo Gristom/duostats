@@ -53,7 +53,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 
-@app.route('/stats/<statsurl>')
+@app.route('/stats', username=statsurl)
 def stats(statsurl):
 
     #Fix
@@ -2570,7 +2570,7 @@ def login():
         #main(form.summoner1.data, form.summoner2.data, form.region.data)
         #flash(p2soloplayedchampscount)
             
-        return redirect(url_for('stats', username=statsurl))
+        return redirect(url_for('.stats', username=statsurl))
     return render_template('index.html',
                             title='Sign In',
                             form=form)
