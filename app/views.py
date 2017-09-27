@@ -53,7 +53,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 
-@app.route(statsurl)
+@app.route('/stats/<statsurl>')
 def stats():
 
     #Fix
@@ -673,7 +673,7 @@ def login():
 
         sum2id = r2['accountId']
 
-        statsurl = "/stats="+form.summoner1.data+form.summoner2.data
+        statsurl = form.summoner1.data+form.summoner2.data
 
 
         dbmatchlistcommon = []
