@@ -54,7 +54,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 @app.route('/stats/<statsurl>')
-def stats():
+def stats(statsurl):
 
     #Fix
     #Pickle of clist?
