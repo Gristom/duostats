@@ -2570,7 +2570,7 @@ def login():
         #main(form.summoner1.data, form.summoner2.data, form.region.data)
         #flash(p2soloplayedchampscount)
             
-        return redirect('/stats')
+        return redirect('/stats/<statsurl>')
     return render_template('index.html',
                             title='Sign In',
                             form=form)
