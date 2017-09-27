@@ -1,5 +1,5 @@
 #!flask/bin/python
-from flask import render_template, flash, redirect
+from flask import render_template, flash, redirect, url_for
 from app import app, db, RiotConsts
 from .forms import LoginForm
 from .models import User
