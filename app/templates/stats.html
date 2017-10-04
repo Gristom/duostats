@@ -1,102 +1,29 @@
  {% extends "base.html" %}
 {% block content %}
 
-    <table class="fixed", align="center", cellpadding="0", border="0">
-	
-       <tr>
 
-            <th width="100", height="75"></th>	
-	    <th width="554", height="75", bgcolor="#C6DEFF"><font size=6">{{ user.nickname }}</font></th>
-            <th width="100", height="75"></th>		
-            <th width="125", height="75"></th>
-            <th width="125", height="75"></th>
-            <th width="125", height="75"></th>
-            <th width="100", height="75"></th>	
-	    <th width="554", height="75", bgcolor="#CCF6C8"><font size=6">{{ user.nickname2 }}</font></th>
-            <th width="100", height="75"></th>	
-
-
-
-    </table>
-
-    </br>
-
-
-    <table class="fixed", align="center", cellpadding="0", border="0">
-
-       <tr>
-
-
-	    <th width="226", bgcolor="#C6DEFF">Win Rate All Games</th>	
-	    <th width="102", bgcolor="#C6DEFF"></th>
-	    <th width="225", bgcolor="#C6DEFF">Solo Win Rate</br><font size="2">(Without {{ user.nickname2 }})</font></th>
-	    <th width="199", bgcolor="#C6DEFF">Duo Win Rate Impact</th>		
-            <th width="127", bgcolor="#D3D3D3"></th>
-            <th width="124", bgcolor="#D3D3D3">Duo Win Rate</th>
-            <th width="125", bgcolor="#D3D3D3"></th>
-	    <th width="199", bgcolor="#CCF6C8">Duo Win Rate Impact</th>
-	    <th width="225", bgcolor="#CCF6C8">Solo Win Rate</br><font size="2">(Without {{ user.nickname }})</font></th>
-	    <th width="100", bgcolor="#CCF6C8"></th>	    
-	    <th width="227", bgcolor="#CCF6C8">Win Rate All Games</th>
-
-
-       </table>
-
-    <table class="fixed", align="center", cellpadding="0", border="0">
-					
-       <tr>
-
-
-	    <th width="226", bgcolor="#C6DEFF"><font size="5">{{ user.winpercentp1all }}%</font></br>{{ user.gamecountp1all }} Played</th>
-	    <th width="102", height="75", valign="center", bgcolor="#C6DEFF"></th>
-	    <th width="225", height="75", valign="center", bgcolor="#C6DEFF"><font size="5">{{ user.solop1winpercent }}%</font></br>{{ user.gamecountp1solo }} Played</th>
-	    <th width="99", height="75", valign="center", bgcolor="#C6DEFF"><img src="http://duostatsx.gg/static/{{ user.p1deltaarrow }}.png" alt="" height="42" width="42"></th>
-	    <th width="100", height="75", valign="center", bgcolor="#C6DEFF">&nbsp<font size="5">{{ user.p1delta }}%</font></th>		
-            <th width="126", bgcolor="#D3D3D3"></th>
-            <th width="124", height="75", valign="center", bgcolor="#D3D3D3"><font size="5">{{ user.duowinpercent }}%</font></br>{{ user.gamecount }} Played</th>
-            <th width="125", bgcolor="#D3D3D3"></th>
-	    <th width="100", height="75", valign="center", bgcolor="#CCF6C8"><img src="http://duostatsx.gg/static/{{ user.p2deltaarrow }}.png" alt="" height="42" width="42"></th>
-	    <th width="98", height="75", valign="center", bgcolor="#CCF6C8"><font size="5">{{ user.p2delta }}%</font></th>
-	    <th width="225", height="75", valign="center", bgcolor="#CCF6C8"><font size="5">{{ user.solop2winpercent }}%</font></br>{{ user.gamecountp2solo }} Played</th>
-	    <th width="100", height="75", valign="center", bgcolor="#CCF6C8"></th>	    
-	    <th width="227", height="75", valign="center", bgcolor="#CCF6C8"><font size="5">{{ user.winpercentp2all }}%</font></br>{{ user.gamecountp2all }} Played
-	 
-       <tr>
-
-    </table>
-
-    
+    <table class="minimalistBlack">
+    <thead>
+    <tr>
+    <th>{{ user.nickname }}</th>
+    <th>{{ user.duowinpercent }}%</br>{{ user.gamecount }} Played/th>
+    <th>{{ user.nickname2 }}</th>
+    </tr>
+    </thead>
 
     {% for post in posts %} 
 
-    <table class="fixed", align="center", cellpadding="0", border="0">
+    <tbody>
 
+    <tr>
+    <td>{{ post.champ }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="42" width="42"><br/>{{ post.kda1commonoutput }}</br>{{ post.kda1commonoutput2 }}</td><td>{{ post.commonwroutput }}</font></br>{{ post.gpcommonoutput }}</td><td>{{ post.champ2 }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="42" width="42"><br/>{{ post.kda2commonoutput }}</br>{{ post.kda2commonoutput2 }}</td></tr>
 
-       <tr>
-
-	    <th width="125", bgcolor="#C6DEFF">{{ post.champ }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber1 }}.png" alt="" height="42" width="42"><br/>{{ post.allkda1commonoutput }}</br>{{ post.allkda1commonoutput2 }}</th>
-	    <th width="100", bgcolor="#C6DEFF"><font size="5">{{ post.allp1allwroutput }}</font></br>{{ post.allgpall1output }}</th>
-            <th width="100", rowspan="0", bgcolor="#C6DEFF"></th> 	
-     	    <th width="125", rowspan="0", bgcolor="#C6DEFF">{{ post.champ }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.solochamp1 }}" height="42" width="42"><br/>{{ post.solokda1commonoutput }}</br>{{ post.solokda1commonoutput2 }}</th>
-            <th width="100", rowspan="0", bgcolor="#C6DEFF"><font size="5">{{ post.solop1solowroutput }}</font></br>{{ post.sologp1output }}</th>
-            <th width="200", rowspan="0", bgcolor="#C6DEFF"></th>     
-            <th width="125", rowspan="0", bgcolor="#D3D3D3">{{ post.champ }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="42" width="42"><br/>{{ post.kda1commonoutput }}</br>{{ post.kda1commonoutput2 }}</th>
-	    <th width="125", valign="center", bgcolor="#D3D3D3"><font size="5">{{ post.commonwroutput }}</font></br>{{ post.gpcommonoutput }}</th>
-            <th width="125", rowspan="0", bgcolor="#D3D3D3">{{ post.champ2 }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="42" width="42"><br/>{{ post.kda2commonoutput }}</br>{{ post.kda2commonoutput2 }}</th>
-            <th width="200", rowspan="0", bgcolor="#CCF6C8"></th>
-            <th width="100", rowspan="0", bgcolor="#CCF6C8"><font size="5">{{ post.solop2solowroutput }}</font></br>{{ post.sologp2output }}</th>  	 	    
-	    <th width="125", rowspan="0", bgcolor="#CCF6C8">{{ post.champ2 }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.solochamp2 }}" height="42" width="42"><br/>{{ post.solokda2commonoutput }}</br>{{ post.solokda2commonoutput2 }}</th>	
-            <th width="100", rowspan="0", bgcolor="#CCF6C8"></th>	    
-	    <th width="100", bgcolor="#CCF6C8"><font size="5">{{ post.allp2allwroutput }}</font></br>{{ post.allgpall2output }}</th>
-	    <th width="125", bgcolor="#CCF6C8">{{ post.champ2 }} <br/><img src="http://duostatsx.gg/static/{{ post.champnumber2 }}.png" alt="" height="42" width="42"><br/>{{ post.allkda2commonoutput }}</br>{{ post.allkda2commonoutput2 }}</th>
-
-       <tr> 
-       </br>      
-	   
-
-    </table>
 
     {% endfor %}
+    
+    </tbody>
+    </tr>
+    </table>
 
 {% endblock %}
 
