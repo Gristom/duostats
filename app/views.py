@@ -723,46 +723,46 @@ def login():
                 wincountcommon = wincountcommon + 1
                 gamecountcommon = gamecountcommon + 1
 
-            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 1:
-
-
-                p1winchamps.append(str(matchhistorydb[i].c1id))
-
-                p1champs.append(str(matchhistorydb[i].c1id))
-
-                p1solowinchamps.append(str(matchhistorydb[i].c1id))
-
-                p1soloplayedchamps.append(str(matchhistorydb[i].c1id))
-
-                cl1[str(matchhistorydb[i].c1id)]['Sologames']=cl1[str(matchhistorydb[i].c1id)]['Sologames'] + 1
-                cl1[str(matchhistorydb[i].c1id)]['Solowins']=cl1[str(matchhistorydb[i].c1id)]['Solowins'] + matchhistorydb[i].winorlose
-                cl1[str(matchhistorydb[i].c1id)]['Solokills']=cl1[str(matchhistorydb[i].c1id)]['Solokills'] + matchhistorydb[i].c1k
-                cl1[str(matchhistorydb[i].c1id)]['Solodeaths']=cl1[str(matchhistorydb[i].c1id)]['Solodeaths'] + matchhistorydb[i].c1d
-                cl1[str(matchhistorydb[i].c1id)]['Soloassists']=cl1[str(matchhistorydb[i].c1id)]['Soloassists'] + matchhistorydb[i].c1a
-
-
-                wincountp1solo = wincountp1solo + 1
-                gamecountp1solo = gamecountp1solo + 1
-
-            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 2:
-
-                
-                p2winchamps.append(str(matchhistorydb[i].c2id))
-
-                p2champs.append(str(matchhistorydb[i].c2id))
-
-                p2solowinchamps.append(str(matchhistorydb[i].c2id))
-
-                p2soloplayedchamps.append(str(matchhistorydb[i].c2id))
-
-                cl2[str(matchhistorydb[i].c2id)]['Sologames']=cl2[str(matchhistorydb[i].c2id)]['Sologames'] + 1
-                cl2[str(matchhistorydb[i].c2id)]['Solowins']=cl2[str(matchhistorydb[i].c2id)]['Solowins'] + matchhistorydb[i].winorlose
-                cl2[str(matchhistorydb[i].c2id)]['Solokills']=cl2[str(matchhistorydb[i].c2id)]['Solokills'] + matchhistorydb[i].c2k
-                cl2[str(matchhistorydb[i].c2id)]['Solodeaths']=cl2[str(matchhistorydb[i].c2id)]['Solodeaths'] + matchhistorydb[i].c2d
-                cl2[str(matchhistorydb[i].c2id)]['Soloassists']=cl2[str(matchhistorydb[i].c2id)]['Soloassists'] + matchhistorydb[i].c2a
-
-                wincountp2solo = wincountp2solo + 1
-                gamecountp2solo = gamecountp2solo + 1
+##            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 1:
+##
+##
+##                p1winchamps.append(str(matchhistorydb[i].c1id))
+##
+##                p1champs.append(str(matchhistorydb[i].c1id))
+##
+##                p1solowinchamps.append(str(matchhistorydb[i].c1id))
+##
+##                p1soloplayedchamps.append(str(matchhistorydb[i].c1id))
+##
+##                cl1[str(matchhistorydb[i].c1id)]['Sologames']=cl1[str(matchhistorydb[i].c1id)]['Sologames'] + 1
+##                cl1[str(matchhistorydb[i].c1id)]['Solowins']=cl1[str(matchhistorydb[i].c1id)]['Solowins'] + matchhistorydb[i].winorlose
+##                cl1[str(matchhistorydb[i].c1id)]['Solokills']=cl1[str(matchhistorydb[i].c1id)]['Solokills'] + matchhistorydb[i].c1k
+##                cl1[str(matchhistorydb[i].c1id)]['Solodeaths']=cl1[str(matchhistorydb[i].c1id)]['Solodeaths'] + matchhistorydb[i].c1d
+##                cl1[str(matchhistorydb[i].c1id)]['Soloassists']=cl1[str(matchhistorydb[i].c1id)]['Soloassists'] + matchhistorydb[i].c1a
+##
+##
+##                wincountp1solo = wincountp1solo + 1
+##                gamecountp1solo = gamecountp1solo + 1
+##
+##            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 2:
+##
+##                
+##                p2winchamps.append(str(matchhistorydb[i].c2id))
+##
+##                p2champs.append(str(matchhistorydb[i].c2id))
+##
+##                p2solowinchamps.append(str(matchhistorydb[i].c2id))
+##
+##                p2soloplayedchamps.append(str(matchhistorydb[i].c2id))
+##
+##                cl2[str(matchhistorydb[i].c2id)]['Sologames']=cl2[str(matchhistorydb[i].c2id)]['Sologames'] + 1
+##                cl2[str(matchhistorydb[i].c2id)]['Solowins']=cl2[str(matchhistorydb[i].c2id)]['Solowins'] + matchhistorydb[i].winorlose
+##                cl2[str(matchhistorydb[i].c2id)]['Solokills']=cl2[str(matchhistorydb[i].c2id)]['Solokills'] + matchhistorydb[i].c2k
+##                cl2[str(matchhistorydb[i].c2id)]['Solodeaths']=cl2[str(matchhistorydb[i].c2id)]['Solodeaths'] + matchhistorydb[i].c2d
+##                cl2[str(matchhistorydb[i].c2id)]['Soloassists']=cl2[str(matchhistorydb[i].c2id)]['Soloassists'] + matchhistorydb[i].c2a
+##
+##                wincountp2solo = wincountp2solo + 1
+##                gamecountp2solo = gamecountp2solo + 1
 
             elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 0:
 
@@ -785,33 +785,33 @@ def login():
 
                 gamecountcommon = gamecountcommon + 1
 
-            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 1:
-
-                cl1[str(matchhistorydb[i].c1id)]['Sologames']=cl1[str(matchhistorydb[i].c1id)]['Sologames'] + 1
-                cl1[str(matchhistorydb[i].c1id)]['Solowins']=cl1[str(matchhistorydb[i].c1id)]['Solowins'] + matchhistorydb[i].winorlose
-                cl1[str(matchhistorydb[i].c1id)]['Solokills']=cl1[str(matchhistorydb[i].c1id)]['Solokills'] + matchhistorydb[i].c1k
-                cl1[str(matchhistorydb[i].c1id)]['Solodeaths']=cl1[str(matchhistorydb[i].c1id)]['Solodeaths'] + matchhistorydb[i].c1d
-                cl1[str(matchhistorydb[i].c1id)]['Soloassists']=cl1[str(matchhistorydb[i].c1id)]['Soloassists'] + matchhistorydb[i].c1a
-
-                p1champs.append(str(matchhistorydb[i].c1id))
-
-                p1soloplayedchamps.append(str(matchhistorydb[i].c1id))
-
-                gamecountp1solo = gamecountp1solo + 1
-
-            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 2:
-
-                cl2[str(matchhistorydb[i].c2id)]['Sologames']=cl2[str(matchhistorydb[i].c2id)]['Sologames'] + 1
-                cl2[str(matchhistorydb[i].c2id)]['Solowins']=cl2[str(matchhistorydb[i].c2id)]['Solowins'] + matchhistorydb[i].winorlose
-                cl2[str(matchhistorydb[i].c2id)]['Solokills']=cl2[str(matchhistorydb[i].c2id)]['Solokills'] + matchhistorydb[i].c2k
-                cl2[str(matchhistorydb[i].c2id)]['Solodeaths']=cl2[str(matchhistorydb[i].c2id)]['Solodeaths'] + matchhistorydb[i].c2d
-                cl2[str(matchhistorydb[i].c2id)]['Soloassists']=cl2[str(matchhistorydb[i].c2id)]['Soloassists'] + matchhistorydb[i].c2a
-            
-                p2champs.append(str(matchhistorydb[i].c2id))
-
-                p2soloplayedchamps.append(str(matchhistorydb[i].c2id))
-
-                gamecountp2solo = gamecountp2solo + 1
+##            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 1:
+##
+##                cl1[str(matchhistorydb[i].c1id)]['Sologames']=cl1[str(matchhistorydb[i].c1id)]['Sologames'] + 1
+##                cl1[str(matchhistorydb[i].c1id)]['Solowins']=cl1[str(matchhistorydb[i].c1id)]['Solowins'] + matchhistorydb[i].winorlose
+##                cl1[str(matchhistorydb[i].c1id)]['Solokills']=cl1[str(matchhistorydb[i].c1id)]['Solokills'] + matchhistorydb[i].c1k
+##                cl1[str(matchhistorydb[i].c1id)]['Solodeaths']=cl1[str(matchhistorydb[i].c1id)]['Solodeaths'] + matchhistorydb[i].c1d
+##                cl1[str(matchhistorydb[i].c1id)]['Soloassists']=cl1[str(matchhistorydb[i].c1id)]['Soloassists'] + matchhistorydb[i].c1a
+##
+##                p1champs.append(str(matchhistorydb[i].c1id))
+##
+##                p1soloplayedchamps.append(str(matchhistorydb[i].c1id))
+##
+##                gamecountp1solo = gamecountp1solo + 1
+##
+##            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 2:
+##
+##                cl2[str(matchhistorydb[i].c2id)]['Sologames']=cl2[str(matchhistorydb[i].c2id)]['Sologames'] + 1
+##                cl2[str(matchhistorydb[i].c2id)]['Solowins']=cl2[str(matchhistorydb[i].c2id)]['Solowins'] + matchhistorydb[i].winorlose
+##                cl2[str(matchhistorydb[i].c2id)]['Solokills']=cl2[str(matchhistorydb[i].c2id)]['Solokills'] + matchhistorydb[i].c2k
+##                cl2[str(matchhistorydb[i].c2id)]['Solodeaths']=cl2[str(matchhistorydb[i].c2id)]['Solodeaths'] + matchhistorydb[i].c2d
+##                cl2[str(matchhistorydb[i].c2id)]['Soloassists']=cl2[str(matchhistorydb[i].c2id)]['Soloassists'] + matchhistorydb[i].c2a
+##            
+##                p2champs.append(str(matchhistorydb[i].c2id))
+##
+##                p2soloplayedchamps.append(str(matchhistorydb[i].c2id))
+##
+##                gamecountp2solo = gamecountp2solo + 1
 
             else:
 
@@ -886,9 +886,9 @@ def login():
 
         #Create solo (uncommon) match list
 
-        matchlistsolo1 = sorted([x for x in matchlist1 if x not in matchlistcommon], reverse=True)
-
-        matchlistsolo2 = sorted([x for x in matchlist2 if x not in matchlistcommon], reverse=True)
+##        matchlistsolo1 = sorted([x for x in matchlist1 if x not in matchlistcommon], reverse=True)
+##
+##        matchlistsolo2 = sorted([x for x in matchlist2 if x not in matchlistcommon], reverse=True)
 
         #Find win percent when duo
 
@@ -1105,273 +1105,273 @@ def login():
 
     
 
-        if not matchlistsolo1:
-
-            print("no new matches to check")
-
-
-        else:
-
-
-            for i in range(len(matchlistsolo1)):
-
-
-                pid1 = 0
-                pid2 = 0
-                
-                j1 = api.get_match_info(matchlistsolo1[i])
-
-                if j1['participantIdentities'][0]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][0]['participantId'])
-
-                elif j1['participantIdentities'][1]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][1]['participantId'])
-
-                elif j1['participantIdentities'][2]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][2]['participantId'])
-
-                elif j1['participantIdentities'][3]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][3]['participantId'])
-
-                elif j1['participantIdentities'][4]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][4]['participantId'])
-                    
-                elif j1['participantIdentities'][5]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][5]['participantId'])
-
-                elif j1['participantIdentities'][6]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][6]['participantId'])
-
-                elif j1['participantIdentities'][7]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][7]['participantId'])
-
-                elif j1['participantIdentities'][8]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][8]['participantId'])
-
-                elif j1['participantIdentities'][9]['player']['currentAccountId'] == sum1id:
-
-                    pid1=(j1['participantIdentities'][9]['participantId'])
-
-                else:
-
-                    print("Error")
-
-
-
-
-
-                if j1['gameDuration'] < 360:
-
-
-                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=2, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
-                    db.session.add(u)
-                    db.session.commit()
-
-                    gamecountp1solo=gamecountp1solo
-
-                elif j1['participants'][pid1-1]['stats']['win'] == True:
-
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solowins'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solowins'] + 1
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] + 1
-
-
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] + j1['participants'][pid1-1]['stats']['kills']
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] + j1['participants'][pid1-1]['stats']['deaths']
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] + j1['participants'][pid1-1]['stats']['assists']
-
-
-                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=1, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
-                
-                    db.session.add(u)
-                    db.session.commit()
-
-
-                    p1solowinchamps.append(j1['participants'][pid1-1]['championId'])
-                    
-
-                    p1soloplayedchamps.append(j1['participants'][pid1-1]['championId'])
-                   
-
-                    
-                    wincountp1solo=wincountp1solo+1
-                    gamecountp1solo=gamecountp1solo+1
-
-                elif j1['participants'][pid1-1]['stats']['win'] == False:
-
-
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] + 1
-
-
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] + j1['participants'][pid1-1]['stats']['kills']
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] + j1['participants'][pid1-1]['stats']['deaths']
-                    cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] + j1['participants'][pid1-1]['stats']['assists']
-
-                    p1soloplayedchamps.append(j1['participants'][pid1-1]['championId'])
-
-
-                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=0, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
-                
-                    db.session.add(u)
-                    db.session.commit()
-
-                    gamecountp1solo=gamecountp1solo+1
-
-                else:
-
-                    gamecountp1solo=gamecountp1solo
-
-
-
-            
-
-
-
-
-
-
-    #Your partners rate when not playing with you                
-
-        if not matchlistsolo2:
-
-            print("no new matches to check")
-
-
-        else:
-
-            for i in range(len(matchlistsolo2)):
-
-
-                pid1 = 0
-                pid2 = 0
-                
-                j1 = api.get_match_info(matchlistsolo2[i])
-
-                if j1['participantIdentities'][0]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][0]['participantId'])
-
-                elif j1['participantIdentities'][1]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][1]['participantId'])
-
-                elif j1['participantIdentities'][2]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][2]['participantId'])
-
-                elif j1['participantIdentities'][3]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][3]['participantId'])
-
-                elif j1['participantIdentities'][4]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][4]['participantId'])
-                    
-                elif j1['participantIdentities'][5]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][5]['participantId'])
-
-                elif j1['participantIdentities'][6]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][6]['participantId'])
-
-                elif j1['participantIdentities'][7]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][7]['participantId'])
-
-                elif j1['participantIdentities'][8]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][8]['participantId'])
-
-                elif j1['participantIdentities'][9]['player']['currentAccountId'] == sum2id:
-
-                    pid2=(j1['participantIdentities'][9]['participantId'])
-
-                else:
-
-                    print("Error")
-
-
-
-
-
-
-                if j1['gameDuration'] < 360:
-
-                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=2, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
-                
-                    db.session.add(u)
-                    db.session.commit()
-
-                    gamecountp2solo=gamecountp2solo
-
-
-                elif j1['participants'][pid2-1]['stats']['win'] == True:
-
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solowins'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solowins'] + 1
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] + 1
-
-
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] + j1['participants'][pid2-1]['stats']['kills']
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] + j1['participants'][pid2-1]['stats']['assists']                
-
-                    p2solowinchamps.append(j1['participants'][pid2-1]['championId'])
-                    
-
-                    p2soloplayedchamps.append(j1['participants'][pid2-1]['championId'])
-
-                    
-
-                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=1, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
-                
-                    db.session.add(u)
-                    db.session.commit()
-
-
-                    
-                    wincountp2solo=wincountp2solo+1
-                    gamecountp2solo=gamecountp2solo+1
-
-                elif j1['participants'][pid2-1]['stats']['win'] == False:
-
-
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] + 1
-
-
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] + j1['participants'][pid2-1]['stats']['kills']
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
-                    cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] + j1['participants'][pid2-1]['stats']['assists'] 
-
-                    p2soloplayedchamps.append(j1['participants'][pid2-1]['championId'])
-
-                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=0, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
-                
-                    db.session.add(u)
-                    db.session.commit()
-
-
-                    gamecountp2solo=gamecountp2solo+1
-
-                else:
-
-                    gamecountp2solo=gamecountp2solo
-                    print("winlose not found error")
-
-
-
-
-            
-   
-            
+##        if not matchlistsolo1:
+##
+##            print("no new matches to check")
+##
+##
+##        else:
+##
+##
+##            for i in range(len(matchlistsolo1)):
+##
+##
+##                pid1 = 0
+##                pid2 = 0
+##                
+##                j1 = api.get_match_info(matchlistsolo1[i])
+##
+##                if j1['participantIdentities'][0]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][0]['participantId'])
+##
+##                elif j1['participantIdentities'][1]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][1]['participantId'])
+##
+##                elif j1['participantIdentities'][2]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][2]['participantId'])
+##
+##                elif j1['participantIdentities'][3]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][3]['participantId'])
+##
+##                elif j1['participantIdentities'][4]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][4]['participantId'])
+##                    
+##                elif j1['participantIdentities'][5]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][5]['participantId'])
+##
+##                elif j1['participantIdentities'][6]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][6]['participantId'])
+##
+##                elif j1['participantIdentities'][7]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][7]['participantId'])
+##
+##                elif j1['participantIdentities'][8]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][8]['participantId'])
+##
+##                elif j1['participantIdentities'][9]['player']['currentAccountId'] == sum1id:
+##
+##                    pid1=(j1['participantIdentities'][9]['participantId'])
+##
+##                else:
+##
+##                    print("Error")
+##
+##
+##
+##
+##
+##                if j1['gameDuration'] < 360:
+##
+##
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=2, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                    db.session.add(u)
+##                    db.session.commit()
+##
+##                    gamecountp1solo=gamecountp1solo
+##
+##                elif j1['participants'][pid1-1]['stats']['win'] == True:
+##
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solowins'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solowins'] + 1
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] + 1
+##
+##
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] + j1['participants'][pid1-1]['stats']['kills']
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] + j1['participants'][pid1-1]['stats']['deaths']
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] + j1['participants'][pid1-1]['stats']['assists']
+##
+##
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=1, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                
+##                    db.session.add(u)
+##                    db.session.commit()
+##
+##
+##                    p1solowinchamps.append(j1['participants'][pid1-1]['championId'])
+##                    
+##
+##                    p1soloplayedchamps.append(j1['participants'][pid1-1]['championId'])
+##                   
+##
+##                    
+##                    wincountp1solo=wincountp1solo+1
+##                    gamecountp1solo=gamecountp1solo+1
+##
+##                elif j1['participants'][pid1-1]['stats']['win'] == False:
+##
+##
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Sologames'] + 1
+##
+##
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solokills'] + j1['participants'][pid1-1]['stats']['kills']
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Solodeaths'] + j1['participants'][pid1-1]['stats']['deaths']
+##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] + j1['participants'][pid1-1]['stats']['assists']
+##
+##                    p1soloplayedchamps.append(j1['participants'][pid1-1]['championId'])
+##
+##
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=0, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                
+##                    db.session.add(u)
+##                    db.session.commit()
+##
+##                    gamecountp1solo=gamecountp1solo+1
+##
+##                else:
+##
+##                    gamecountp1solo=gamecountp1solo
+##
+##
+##
+##            
+##
+##
+##
+##
+##
+##
+##    #Your partners rate when not playing with you                
+##
+##        if not matchlistsolo2:
+##
+##            print("no new matches to check")
+##
+##
+##        else:
+##
+##            for i in range(len(matchlistsolo2)):
+##
+##
+##                pid1 = 0
+##                pid2 = 0
+##                
+##                j1 = api.get_match_info(matchlistsolo2[i])
+##
+##                if j1['participantIdentities'][0]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][0]['participantId'])
+##
+##                elif j1['participantIdentities'][1]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][1]['participantId'])
+##
+##                elif j1['participantIdentities'][2]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][2]['participantId'])
+##
+##                elif j1['participantIdentities'][3]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][3]['participantId'])
+##
+##                elif j1['participantIdentities'][4]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][4]['participantId'])
+##                    
+##                elif j1['participantIdentities'][5]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][5]['participantId'])
+##
+##                elif j1['participantIdentities'][6]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][6]['participantId'])
+##
+##                elif j1['participantIdentities'][7]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][7]['participantId'])
+##
+##                elif j1['participantIdentities'][8]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][8]['participantId'])
+##
+##                elif j1['participantIdentities'][9]['player']['currentAccountId'] == sum2id:
+##
+##                    pid2=(j1['participantIdentities'][9]['participantId'])
+##
+##                else:
+##
+##                    print("Error")
+##
+##
+##
+##
+##
+##
+##                if j1['gameDuration'] < 360:
+##
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=2, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                
+##                    db.session.add(u)
+##                    db.session.commit()
+##
+##                    gamecountp2solo=gamecountp2solo
+##
+##
+##                elif j1['participants'][pid2-1]['stats']['win'] == True:
+##
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solowins'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solowins'] + 1
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] + 1
+##
+##
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] + j1['participants'][pid2-1]['stats']['kills']
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] + j1['participants'][pid2-1]['stats']['assists']                
+##
+##                    p2solowinchamps.append(j1['participants'][pid2-1]['championId'])
+##                    
+##
+##                    p2soloplayedchamps.append(j1['participants'][pid2-1]['championId'])
+##
+##                    
+##
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=1, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                
+##                    db.session.add(u)
+##                    db.session.commit()
+##
+##
+##                    
+##                    wincountp2solo=wincountp2solo+1
+##                    gamecountp2solo=gamecountp2solo+1
+##
+##                elif j1['participants'][pid2-1]['stats']['win'] == False:
+##
+##
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Sologames'] + 1
+##
+##
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solokills'] + j1['participants'][pid2-1]['stats']['kills']
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Solodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
+##                    cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Soloassists'] + j1['participants'][pid2-1]['stats']['assists'] 
+##
+##                    p2soloplayedchamps.append(j1['participants'][pid2-1]['championId'])
+##
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=0, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                
+##                    db.session.add(u)
+##                    db.session.commit()
+##
+##
+##                    gamecountp2solo=gamecountp2solo+1
+##
+##                else:
+##
+##                    gamecountp2solo=gamecountp2solo
+##                    print("winlose not found error")
+##
+##
+##
+##
+##            
+##   
+##            
 
         #Final Stat Calculations
 
@@ -1834,32 +1834,32 @@ def login():
         p2champskeys = heapq.nlargest(300, p2champscount, key=p2champscount.get)
 
 
-        #need alternative if no champ with 5 played
-        
-        p1champsmaxwrduo = {k: v for k, v, in p1champscountduo.items() if v >= 0}#was5
-        p2champsmaxwrduo = {k: v for k, v, in p2champscountduo.items() if v >= 0}#was5
-
-        p1champsmaxwrkeysduo = heapq.nlargest(300, p1champscountduo, key=p1champscountduo.get)
-        p2champsmaxwrkeysduo = heapq.nlargest(300, p2champscountduo, key=p2champscountduo.get)
-        
-
-        #Solo without partner stats
-
-        p1soloplayedchampscount = {k: v for k, v, in p1soloplayedchampscount.items() if v >= 0}
-        p1soloplayedchampskeys = heapq.nlargest(300, p1soloplayedchampscount, key=p1soloplayedchampscount.get)
-
-        p2soloplayedchampscount = {k: v for k, v, in p2soloplayedchampscount.items() if v >= 0}
-        p2soloplayedchampskeys = heapq.nlargest(300, p2soloplayedchampscount, key=p2soloplayedchampscount.get)
-
-      
-
-        #All games stats    
-
-        p1allplayedchampscount = {k: v for k, v, in p1allplayedchampscount.items() if v >= 0}
-        p1allplayedchampskeys = heapq.nlargest(300, p1allplayedchampscount, key=p1allplayedchampscount.get)
-
-        p2allplayedchampscount = {k: v for k, v, in p2allplayedchampscount.items() if v >= 0}
-        p2allplayedchampskeys = heapq.nlargest(300, p2allplayedchampscount, key=p2allplayedchampscount.get)
+##        #need alternative if no champ with 5 played
+##        
+##        p1champsmaxwrduo = {k: v for k, v, in p1champscountduo.items() if v >= 0}#was5
+##        p2champsmaxwrduo = {k: v for k, v, in p2champscountduo.items() if v >= 0}#was5
+##
+##        p1champsmaxwrkeysduo = heapq.nlargest(300, p1champscountduo, key=p1champscountduo.get)
+##        p2champsmaxwrkeysduo = heapq.nlargest(300, p2champscountduo, key=p2champscountduo.get)
+##        
+##
+##        #Solo without partner stats
+##
+##        p1soloplayedchampscount = {k: v for k, v, in p1soloplayedchampscount.items() if v >= 0}
+##        p1soloplayedchampskeys = heapq.nlargest(300, p1soloplayedchampscount, key=p1soloplayedchampscount.get)
+##
+##        p2soloplayedchampscount = {k: v for k, v, in p2soloplayedchampscount.items() if v >= 0}
+##        p2soloplayedchampskeys = heapq.nlargest(300, p2soloplayedchampscount, key=p2soloplayedchampscount.get)
+##
+##      
+##
+##        #All games stats    
+##
+##        p1allplayedchampscount = {k: v for k, v, in p1allplayedchampscount.items() if v >= 0}
+##        p1allplayedchampskeys = heapq.nlargest(300, p1allplayedchampscount, key=p1allplayedchampscount.get)
+##
+##        p2allplayedchampscount = {k: v for k, v, in p2allplayedchampscount.items() if v >= 0}
+##        p2allplayedchampskeys = heapq.nlargest(300, p2allplayedchampscount, key=p2allplayedchampscount.get)
         
         
 
@@ -1874,25 +1874,25 @@ def login():
             gpcommon.append(playedchampscount[playedchampskeys[i]])
             gpcommonoutput.append(str(playedchampscount[playedchampskeys[i]])+" Played")
 
-        for i in range(len(p1soloplayedchampskeys)):
-            
-            gp1.append(p1soloplayedchampscount[p1soloplayedchampskeys[i]])
-            gp1output.append(str(p1soloplayedchampscount[p1soloplayedchampskeys[i]])+" Played")
-
-        for i in range(len(p2soloplayedchampskeys)):
-            
-            gp2.append(p2soloplayedchampscount[p2soloplayedchampskeys[i]])
-            gp2output.append(str(p2soloplayedchampscount[p2soloplayedchampskeys[i]])+" Played")
-
-        for i in range(len(p1allplayedchampskeys)):
-            
-            gpall1.append(p1allplayedchampscount[p1allplayedchampskeys[i]])
-            gpall1output.append(str(p1allplayedchampscount[p1allplayedchampskeys[i]])+" Played")
-
-        for i in range(len(p2allplayedchampskeys)):
-            
-            gpall2.append(p2allplayedchampscount[p2allplayedchampskeys[i]])
-            gpall2output.append(str(p2allplayedchampscount[p2allplayedchampskeys[i]])+" Played")
+##        for i in range(len(p1soloplayedchampskeys)):
+##            
+##            gp1.append(p1soloplayedchampscount[p1soloplayedchampskeys[i]])
+##            gp1output.append(str(p1soloplayedchampscount[p1soloplayedchampskeys[i]])+" Played")
+##
+##        for i in range(len(p2soloplayedchampskeys)):
+##            
+##            gp2.append(p2soloplayedchampscount[p2soloplayedchampskeys[i]])
+##            gp2output.append(str(p2soloplayedchampscount[p2soloplayedchampskeys[i]])+" Played")
+##
+##        for i in range(len(p1allplayedchampskeys)):
+##            
+##            gpall1.append(p1allplayedchampscount[p1allplayedchampskeys[i]])
+##            gpall1output.append(str(p1allplayedchampscount[p1allplayedchampskeys[i]])+" Played")
+##
+##        for i in range(len(p2allplayedchampskeys)):
+##            
+##            gpall2.append(p2allplayedchampscount[p2allplayedchampskeys[i]])
+##            gpall2output.append(str(p2allplayedchampscount[p2allplayedchampskeys[i]])+" Played")
             
 
       
@@ -1907,75 +1907,75 @@ def login():
                 print("not enough games played")
 
 
-        for key in maxwrchampscount:
-            try:
-                winratemax[key] = winchampscount[key]/maxwrchampscount[key]
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-                
-
-        for key in p1champsmaxwrduo:
-            try:
-                p1win[key] = p1winchampscountduo[key]/p1champscountduo[key]
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-
-        for key in p2champsmaxwrduo:
-            try:
-                p2win[key] = p2winchampscountduo[key]/p2champscountduo[key]
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-
-
-        for key in p1soloplayedchampscount:
-            try:
-                p1solowinrate[key] = p1solowinchampscount[key]/p1soloplayedchampscount[key]
-                wrp1solo.append(p1solowinchampscount[key]/p1soloplayedchampscount[key])
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-            except IndexError:
-                print("Index Error")
-
-        for key in p2soloplayedchampscount:
-            try:
-                p2solowinrate[key] = p2solowinchampscount[key]/p2soloplayedchampscount[key]
-                wrp2solo.append(p2solowinchampscount[key]/p2soloplayedchampscount[key])
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-            except IndexError:
-                print("Index Error")
-
-        for key in p1allplayedchampscount:
-            try:
-                p1allwinrate[key] = p1allwinchampscount[key]/p1allplayedchampscount[key]
-                #wrp1solo.append(p1solowinchampscount[key]/p1soloplayedchampscount[key])
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-            except IndexError:
-                print("Index Error")
-
-        for key in p2allplayedchampscount:
-            try:
-                p2allwinrate[key] = p2allwinchampscount[key]/p2allplayedchampscount[key]
-                #wrp2solo.append(p2solowinchampscount[key]/p2soloplayedchampscount[key])
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-            except IndexError:
-                print("Index Error")
+##        for key in maxwrchampscount:
+##            try:
+##                winratemax[key] = winchampscount[key]/maxwrchampscount[key]
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##                
+##
+##        for key in p1champsmaxwrduo:
+##            try:
+##                p1win[key] = p1winchampscountduo[key]/p1champscountduo[key]
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##
+##        for key in p2champsmaxwrduo:
+##            try:
+##                p2win[key] = p2winchampscountduo[key]/p2champscountduo[key]
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##
+##
+##        for key in p1soloplayedchampscount:
+##            try:
+##                p1solowinrate[key] = p1solowinchampscount[key]/p1soloplayedchampscount[key]
+##                wrp1solo.append(p1solowinchampscount[key]/p1soloplayedchampscount[key])
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##            except IndexError:
+##                print("Index Error")
+##
+##        for key in p2soloplayedchampscount:
+##            try:
+##                p2solowinrate[key] = p2solowinchampscount[key]/p2soloplayedchampscount[key]
+##                wrp2solo.append(p2solowinchampscount[key]/p2soloplayedchampscount[key])
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##            except IndexError:
+##                print("Index Error")
+##
+##        for key in p1allplayedchampscount:
+##            try:
+##                p1allwinrate[key] = p1allwinchampscount[key]/p1allplayedchampscount[key]
+##                #wrp1solo.append(p1solowinchampscount[key]/p1soloplayedchampscount[key])
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##            except IndexError:
+##                print("Index Error")
+##
+##        for key in p2allplayedchampscount:
+##            try:
+##                p2allwinrate[key] = p2allwinchampscount[key]/p2allplayedchampscount[key]
+##                #wrp2solo.append(p2solowinchampscount[key]/p2soloplayedchampscount[key])
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##            except IndexError:
+##                print("Index Error")
 
 
         
@@ -1992,66 +1992,66 @@ def login():
                 print("not enough games played")
 
 
-        for key in maxwrchampskeys:
-            try:
-                maxwin.append(winratemax[key])
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-                
-
-        for key in p1champsmaxwrkeysduo:
-            try:
-                maxwinp1.append(p1win[key])
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-
-        for key in p2champsmaxwrkeysduo:
-            try:
-                maxwinp2.append(p2win[key])
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-
-        for key in p1soloplayedchampskeys:
-            try:
-                p1solowr.append(str(Decimal((p1solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
-                p1solowroutput.append(str(Decimal((p1solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-
-        for key in p2soloplayedchampskeys:
-            try:
-                p2solowr.append(str(Decimal((p2solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
-                p2solowroutput.append(str(Decimal((p2solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-
-        for key in p1allplayedchampskeys:
-            try:
-                p1allwr.append(str(Decimal((p1allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
-                p1allwroutput.append(str(Decimal((p1allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
-
-        for key in p2allplayedchampskeys:
-            try:
-                p2allwr.append(str(Decimal((p2allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
-                p2allwroutput.append(str(Decimal((p2allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
-            except ZeroDivisionError:
-                print("not enough games played")
-            except KeyError:
-                print("not enough games played")
+##        for key in maxwrchampskeys:
+##            try:
+##                maxwin.append(winratemax[key])
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##                
+##
+##        for key in p1champsmaxwrkeysduo:
+##            try:
+##                maxwinp1.append(p1win[key])
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##
+##        for key in p2champsmaxwrkeysduo:
+##            try:
+##                maxwinp2.append(p2win[key])
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##
+##        for key in p1soloplayedchampskeys:
+##            try:
+##                p1solowr.append(str(Decimal((p1solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
+##                p1solowroutput.append(str(Decimal((p1solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##
+##        for key in p2soloplayedchampskeys:
+##            try:
+##                p2solowr.append(str(Decimal((p2solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
+##                p2solowroutput.append(str(Decimal((p2solowinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##
+##        for key in p1allplayedchampskeys:
+##            try:
+##                p1allwr.append(str(Decimal((p1allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
+##                p1allwroutput.append(str(Decimal((p1allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
+##
+##        for key in p2allplayedchampskeys:
+##            try:
+##                p2allwr.append(str(Decimal((p2allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
+##                p2allwroutput.append(str(Decimal((p2allwinrate[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+##            except ZeroDivisionError:
+##                print("not enough games played")
+##            except KeyError:
+##                print("not enough games played")
                 
 
 
@@ -2213,71 +2213,71 @@ def login():
 
 
 
-        for i in range(len(p1soloplayedchampskeys)):
-
-            c1soloname.append(cl1[str(p1soloplayedchampskeys[i])]['name'])
-            
-            k1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            d1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            a1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            kda1solooutput.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))           
-        
-            kda1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            kda1solooutput2.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-
-
-        for i in range(len(p2soloplayedchampskeys)):
-
-            c2soloname.append(cl2[str(p2soloplayedchampskeys[i])]['name'])
-            
-            k2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            d2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            a2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-        
-            kda2solooutput.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))           
-
-            kda2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            kda2solooutput2.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-
-
-        for i in range(len(p1allplayedchampskeys)):
-
-            c1allname.append(cl1[str(p1allplayedchampskeys[i])]['name'])
-            
-            k1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            d1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            a1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            kda1alloutput.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-        
-            kda1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            kda1alloutput2.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-
-        for i in range(len(p2allplayedchampskeys)):
-
-            c2allname.append(cl2[str(p2allplayedchampskeys[i])]['name'])
-            
-            k2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            d2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            a2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            kda2alloutput.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-        
-            kda2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
-
-            kda2alloutput2.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+##        for i in range(len(p1soloplayedchampskeys)):
+##
+##            c1soloname.append(cl1[str(p1soloplayedchampskeys[i])]['name'])
+##            
+##            k1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            d1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            a1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            kda1solooutput.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))           
+##        
+##            kda1solo.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            kda1solooutput2.append(str(Decimal(cl1[str(p1soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+##
+##
+##        for i in range(len(p2soloplayedchampskeys)):
+##
+##            c2soloname.append(cl2[str(p2soloplayedchampskeys[i])]['name'])
+##            
+##            k2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            d2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            a2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##        
+##            kda2solooutput.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['Soloavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))           
+##
+##            kda2solo.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            kda2solooutput2.append(str(Decimal(cl2[str(p2soloplayedchampskeys[i])]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+##
+##
+##        for i in range(len(p1allplayedchampskeys)):
+##
+##            c1allname.append(cl1[str(p1allplayedchampskeys[i])]['name'])
+##            
+##            k1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            d1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            a1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            kda1alloutput.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl1[str(p1allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##        
+##            kda1all.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            kda1alloutput2.append(str(Decimal(cl1[str(p1allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+##
+##        for i in range(len(p2allplayedchampskeys)):
+##
+##            c2allname.append(cl2[str(p2allplayedchampskeys[i])]['name'])
+##            
+##            k2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            d2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            a2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            kda2alloutput.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavgd']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+"/"+str(Decimal(cl2[str(p2allplayedchampskeys[i])]['Allavga']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##        
+##            kda2all.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+##
+##            kda2alloutput2.append(str(Decimal(cl2[str(p2allplayedchampskeys[i])]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
             
 
 
@@ -2312,82 +2312,82 @@ def login():
 
 
 
-        #Maxwrcommonchamps
-        
-        maxwinrate = max(winratemax, key=winratemax.get)
-        
-
-        maxwinpercent = (winchampscount[maxwinrate]/playedchampscount[maxwinrate]) * 100
-
-        maxwr.append(maxwinrate.translate(str.maketrans('','','[](){}<>,')))
-        
-        maxwr[0] = maxwr[0].split()
-        
-        maxwinc1 = maxwr[0][0]
-        maxwinc2 = maxwr[0][1]
-
-        maxwrgp = playedchampscount[maxwinrate]
-
-        maxwinc1name = cl1[maxwinc1]['name']
-        maxwinc2name = cl2[maxwinc2]['name']
-
-        maxwink1 = cl1[maxwinc1]['Duoavgk']
-        maxwink2 = cl2[maxwinc2]['Duoavgk']
-        
-        maxwind1 = cl1[maxwinc1]['Duoavgd']
-        maxwind2 = cl2[maxwinc2]['Duoavgd']
-        
-        maxwina1 = cl1[maxwinc1]['Duoavga']
-        maxwina2 = cl2[maxwinc2]['Duoavga']
-        
-        maxwinkda1 = cl1[maxwinc1]['DuoKDA']
-        maxwinkda2 = cl2[maxwinc2]['DuoKDA']
-
-
-
-        print("")
-        print(maxwrgp)
-        print(maxwinpercent)
-        print(maxwinc1name)
-        print(maxwinc2name)
-        print(maxwinc1)
-        print(maxwinc2)
-        print(maxwink1)
-        print(maxwink2)
-        print(maxwind1)
-        print(maxwind2)
-        print(maxwina1)
-        print(maxwina2)
-        print(maxwinkda1)
-        print(maxwinkda2)
-        print("")
+##        #Maxwrcommonchamps
+##        
+##        maxwinrate = max(winratemax, key=winratemax.get)
+##        
+##
+##        maxwinpercent = (winchampscount[maxwinrate]/playedchampscount[maxwinrate]) * 100
+##
+##        maxwr.append(maxwinrate.translate(str.maketrans('','','[](){}<>,')))
+##        
+##        maxwr[0] = maxwr[0].split()
+##        
+##        maxwinc1 = maxwr[0][0]
+##        maxwinc2 = maxwr[0][1]
+##
+##        maxwrgp = playedchampscount[maxwinrate]
+##
+##        maxwinc1name = cl1[maxwinc1]['name']
+##        maxwinc2name = cl2[maxwinc2]['name']
+##
+##        maxwink1 = cl1[maxwinc1]['Duoavgk']
+##        maxwink2 = cl2[maxwinc2]['Duoavgk']
+##        
+##        maxwind1 = cl1[maxwinc1]['Duoavgd']
+##        maxwind2 = cl2[maxwinc2]['Duoavgd']
+##        
+##        maxwina1 = cl1[maxwinc1]['Duoavga']
+##        maxwina2 = cl2[maxwinc2]['Duoavga']
+##        
+##        maxwinkda1 = cl1[maxwinc1]['DuoKDA']
+##        maxwinkda2 = cl2[maxwinc2]['DuoKDA']
 
 
-        #Max win rate individual champs
 
-        p1maxwinrate = max(p1win, key=p1win.get)    
-        p2maxwinrate = max(p2win, key=p2win.get)
+##        print("")
+##        print(maxwrgp)
+##        print(maxwinpercent)
+##        print(maxwinc1name)
+##        print(maxwinc2name)
+##        print(maxwinc1)
+##        print(maxwinc2)
+##        print(maxwink1)
+##        print(maxwink2)
+##        print(maxwind1)
+##        print(maxwind2)
+##        print(maxwina1)
+##        print(maxwina2)
+##        print(maxwinkda1)
+##        print(maxwinkda2)
+##        print("")
 
-        maxwinpercentp1 = p1winchampscountduo[p1maxwinrate]/p1champscountduo[p1maxwinrate]
-        maxwinpercentp2 = p2winchampscountduo[p2maxwinrate]/p2champscountduo[p2maxwinrate]
 
-
-        p1maxwinname = cl1[str(p1maxwinrate)]['name']
-        p2maxwinname = cl2[str(p2maxwinrate)]['name']
-
-        p1maxwingames = cl1[str(p1maxwinrate)]['Duogames']
-        p2maxwingames = cl2[str(p2maxwinrate)]['Duogames']
-
-        print(p1maxwinname)
-        print(p2maxwinname)
-        print(p1maxwingames)
-        print(p2maxwingames)                               
-        print(maxwinpercentp1)
-        print(maxwinpercentp2)
-
-        print("")
-        print(matchlistsolo1)
-        print(matchlistsolo2)
+##        #Max win rate individual champs
+##
+##        p1maxwinrate = max(p1win, key=p1win.get)    
+##        p2maxwinrate = max(p2win, key=p2win.get)
+##
+##        maxwinpercentp1 = p1winchampscountduo[p1maxwinrate]/p1champscountduo[p1maxwinrate]
+##        maxwinpercentp2 = p2winchampscountduo[p2maxwinrate]/p2champscountduo[p2maxwinrate]
+##
+##
+##        p1maxwinname = cl1[str(p1maxwinrate)]['name']
+##        p2maxwinname = cl2[str(p2maxwinrate)]['name']
+##
+##        p1maxwingames = cl1[str(p1maxwinrate)]['Duogames']
+##        p2maxwingames = cl2[str(p2maxwinrate)]['Duogames']
+##
+##        print(p1maxwinname)
+##        print(p2maxwinname)
+##        print(p1maxwingames)
+##        print(p2maxwingames)                               
+##        print(maxwinpercentp1)
+##        print(maxwinpercentp2)
+##
+##        print("")
+##        print(matchlistsolo1)
+##        print(matchlistsolo2)
 
         #Win % All games
 
@@ -2505,64 +2505,64 @@ def login():
 ##            xgpall2=xgpall2+1
 
 
-        #Duo Win Rate Impact % and Arrow calcs
-
-        p1deltaarrow = ""
-        p2deltaarrow = ""
-
-        p1delta = winpercentcommon-winpercentp1solo
-        p2delta = winpercentcommon-winpercentp2solo
-
-        p1delta = float(p1delta)
-        p2delta = float(p2delta)
-
-        if p1delta == 0:
-
-            p1deltaarrow = "Same"
-
-        elif p1delta > 2:
-
-            p1deltaarrow = "Pos2"
-
-        elif p1delta < -2:
-
-            p1deltaarrow = "Neg2"
-
-        elif p1delta > 0:
-
-            p1deltaarrow = "Pos"
-
-        elif p1delta < 0:
-
-            p1deltaarrow = "Neg"
-
-        else:
-
-            print("Error p1delta")
-
-        if p2delta == 0:
-
-            p2deltaarrow = "Same"
-
-        elif p2delta > 2:
-
-            p2deltaarrow = "Pos2"
-
-        elif p2delta < -2:
-
-            p2deltaarrow = "Neg2"
-
-        elif p2delta > 0:
-
-            p2deltaarrow = "Pos"
-
-        elif p2delta < 0:
-
-            p2deltaarrow = "Neg"
-
-        else:
-
-            print("Error p2delta")
+##        #Duo Win Rate Impact % and Arrow calcs
+##
+##        p1deltaarrow = ""
+##        p2deltaarrow = ""
+##
+##        p1delta = winpercentcommon-winpercentp1solo
+##        p2delta = winpercentcommon-winpercentp2solo
+##
+##        p1delta = float(p1delta)
+##        p2delta = float(p2delta)
+##
+##        if p1delta == 0:
+##
+##            p1deltaarrow = "Same"
+##
+##        elif p1delta > 2:
+##
+##            p1deltaarrow = "Pos2"
+##
+##        elif p1delta < -2:
+##
+##            p1deltaarrow = "Neg2"
+##
+##        elif p1delta > 0:
+##
+##            p1deltaarrow = "Pos"
+##
+##        elif p1delta < 0:
+##
+##            p1deltaarrow = "Neg"
+##
+##        else:
+##
+##            print("Error p1delta")
+##
+##        if p2delta == 0:
+##
+##            p2deltaarrow = "Same"
+##
+##        elif p2delta > 2:
+##
+##            p2deltaarrow = "Pos2"
+##
+##        elif p2delta < -2:
+##
+##            p2deltaarrow = "Neg2"
+##
+##        elif p2delta > 0:
+##
+##            p2deltaarrow = "Pos"
+##
+##        elif p2delta < 0:
+##
+##            p2deltaarrow = "Neg"
+##
+##        else:
+##
+##            print("Error p2delta")
 
         
 
