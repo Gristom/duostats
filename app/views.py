@@ -673,7 +673,7 @@ def login():
 
         sum2id = r2['accountId']
 
-        statsurl = form.summoner1.data+form.summoner2.data
+        statsurl = form.summoner1.data+form.summoner2.data+form.region.data
 
 
         dbmatchlistcommon = []
