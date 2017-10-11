@@ -2505,64 +2505,64 @@ def login():
 ##            xgpall2=xgpall2+1
 
 
-##        #Duo Win Rate Impact % and Arrow calcs
-##
-##        p1deltaarrow = ""
-##        p2deltaarrow = ""
-##
-##        p1delta = winpercentcommon-winpercentp1solo
-##        p2delta = winpercentcommon-winpercentp2solo
-##
-##        p1delta = float(p1delta)
-##        p2delta = float(p2delta)
-##
-##        if p1delta == 0:
-##
-##            p1deltaarrow = "Same"
-##
-##        elif p1delta > 2:
-##
-##            p1deltaarrow = "Pos2"
-##
-##        elif p1delta < -2:
-##
-##            p1deltaarrow = "Neg2"
-##
-##        elif p1delta > 0:
-##
-##            p1deltaarrow = "Pos"
-##
-##        elif p1delta < 0:
-##
-##            p1deltaarrow = "Neg"
-##
-##        else:
-##
-##            print("Error p1delta")
-##
-##        if p2delta == 0:
-##
-##            p2deltaarrow = "Same"
-##
-##        elif p2delta > 2:
-##
-##            p2deltaarrow = "Pos2"
-##
-##        elif p2delta < -2:
-##
-##            p2deltaarrow = "Neg2"
-##
-##        elif p2delta > 0:
-##
-##            p2deltaarrow = "Pos"
-##
-##        elif p2delta < 0:
-##
-##            p2deltaarrow = "Neg"
-##
-##        else:
-##
-##            print("Error p2delta")
+        #Duo Win Rate Impact % and Arrow calcs
+
+        p1deltaarrow = ""
+        p2deltaarrow = ""
+
+        p1delta = winpercentcommon-winpercentp1solo
+        p2delta = winpercentcommon-winpercentp2solo
+
+        p1delta = float(p1delta)
+        p2delta = float(p2delta)
+
+        if p1delta == 0:
+
+            p1deltaarrow = "Same"
+
+        elif p1delta > 2:
+
+            p1deltaarrow = "Pos2"
+
+        elif p1delta < -2:
+
+            p1deltaarrow = "Neg2"
+
+        elif p1delta > 0:
+
+            p1deltaarrow = "Pos"
+
+        elif p1delta < 0:
+
+            p1deltaarrow = "Neg"
+
+        else:
+
+            print("Error p1delta")
+
+        if p2delta == 0:
+
+            p2deltaarrow = "Same"
+
+        elif p2delta > 2:
+
+            p2deltaarrow = "Pos2"
+
+        elif p2delta < -2:
+
+            p2deltaarrow = "Neg2"
+
+        elif p2delta > 0:
+
+            p2deltaarrow = "Pos"
+
+        elif p2delta < 0:
+
+            p2deltaarrow = "Neg"
+
+        else:
+
+            print("Error p2delta")
 
         
 
