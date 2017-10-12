@@ -84,7 +84,7 @@ class RiotAPI(object):
             
             #print(i)
             alimitcount.append(int(apprate1[i]))
-            alimitallowed.append(int(allowedapprate1[i])-10)
+            alimitallowed.append(int(allowedapprate1[i])-15)
             alimitsecs.append(int(apprate1[i+1]))
             i = i+2
 
@@ -92,7 +92,7 @@ class RiotAPI(object):
 
             #print(z)
             mlimitcount.append(int(methodrate[z]))
-            mlimitallowed.append(int(allowedmethodrate[z])-10)
+            mlimitallowed.append(int(allowedmethodrate[z])-15)
             mlimitsecs.append(int(methodrate[z+1]))
             z = z+2
 
@@ -207,14 +207,14 @@ class RiotAPI(object):
                         
                         print(i)
                         alimitcount.append(int(apprate1[i]))
-                        alimitallowed.append(int(allowedapprate1[i]))
+                        alimitallowed.append(int(allowedapprate1[i])-15)
                         alimitsecs.append(int(apprate1[i+1]))
                         i = i+2
 
                     while z < (len(methodrate)):
 
                         mlimitcount.append(int(methodrate[z]))
-                        mlimitallowed.append(int(allowedmethodrate[z]))
+                        mlimitallowed.append(int(allowedmethodrate[z])-15)
                         mlimitsecs.append(int(methodrate[z+1]))
                         z = z+2
 
