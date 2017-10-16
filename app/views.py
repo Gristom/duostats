@@ -2586,7 +2586,7 @@ def login():
         global sum1name
         global sum2name
 
-        global regioncode
+        global region
 
         sum1name = form.summoner1.data
         sum2name = form.summoner2.data
