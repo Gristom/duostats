@@ -529,14 +529,14 @@ def stats():
 
     #Get Summoner1name
 
-    r1 = api.get_summoner_by_name(form.summoner1.data)
+    r1 = api.get_summoner_by_name(sum1name)
     print(r1['accountId'])
 
     sum1id = r1['accountId']
     
     #Get Summoner2name
     
-    r2 = api.get_summoner_by_name(form.summoner2.data)
+    r2 = api.get_summoner_by_name(sum2name)
     print(r2['accountId'])
 
     sum2id = r2['accountId']
@@ -559,11 +559,11 @@ def stats():
 
         dbmatchlistcommon.append(int(matchhistorydb[i].matchid))
 
-        if matchhistorydb[i].winorlose == 2 and matchhistorydb[i].regioncode == form.region.data:
+        if matchhistorydb[i].winorlose == 2 and matchhistorydb[i].regioncode == region:
 
             print("Remake")
 
-        elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 0:
+        elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == region and matchhistorydb[i].soloduo == 0:
 
             winchampscommon.append(str(matchhistorydb[i].c1id)+", "+str(matchhistorydb[i].c2id))
 
@@ -591,7 +591,7 @@ def stats():
             wincountcommon = wincountcommon + 1
             gamecountcommon = gamecountcommon + 1
 
-##            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 1:
+##            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == region and matchhistorydb[i].soloduo == 1:
 ##
 ##
 ##                p1winchamps.append(str(matchhistorydb[i].c1id))
@@ -612,7 +612,7 @@ def stats():
 ##                wincountp1solo = wincountp1solo + 1
 ##                gamecountp1solo = gamecountp1solo + 1
 ##
-##            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 2:
+##            elif matchhistorydb[i].winorlose == 1 and matchhistorydb[i].regioncode == region and matchhistorydb[i].soloduo == 2:
 ##
 ##                
 ##                p2winchamps.append(str(matchhistorydb[i].c2id))
@@ -632,7 +632,7 @@ def stats():
 ##                wincountp2solo = wincountp2solo + 1
 ##                gamecountp2solo = gamecountp2solo + 1
 
-        elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 0:
+        elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == region and matchhistorydb[i].soloduo == 0:
 
             playedchampscommon.append(str(matchhistorydb[i].c1id)+", "+str(matchhistorydb[i].c2id))
 
@@ -653,7 +653,7 @@ def stats():
 
             gamecountcommon = gamecountcommon + 1
 
-##            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 1:
+##            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == region and matchhistorydb[i].soloduo == 1:
 ##
 ##                cl1[str(matchhistorydb[i].c1id)]['Sologames']=cl1[str(matchhistorydb[i].c1id)]['Sologames'] + 1
 ##                cl1[str(matchhistorydb[i].c1id)]['Solowins']=cl1[str(matchhistorydb[i].c1id)]['Solowins'] + matchhistorydb[i].winorlose
@@ -667,7 +667,7 @@ def stats():
 ##
 ##                gamecountp1solo = gamecountp1solo + 1
 ##
-##            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == form.region.data and matchhistorydb[i].soloduo == 2:
+##            elif matchhistorydb[i].winorlose == 0 and matchhistorydb[i].regioncode == region and matchhistorydb[i].soloduo == 2:
 ##
 ##                cl2[str(matchhistorydb[i].c2id)]['Sologames']=cl2[str(matchhistorydb[i].c2id)]['Sologames'] + 1
 ##                cl2[str(matchhistorydb[i].c2id)]['Solowins']=cl2[str(matchhistorydb[i].c2id)]['Solowins'] + matchhistorydb[i].winorlose
@@ -870,7 +870,7 @@ def stats():
 
             if j1['gameDuration'] < 360:
 
-                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=2, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=2, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 db.session.add(u)
                 db.session.commit()
                 
@@ -913,7 +913,7 @@ def stats():
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] + j1['participants'][pid2-1]['stats']['assists']
                 
-                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=1, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=1, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                 db.session.add(u)
                 db.session.commit()
@@ -952,7 +952,7 @@ def stats():
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] + j1['participants'][pid2-1]['stats']['assists']
 
-                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=0, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=0, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                 db.session.add(u)
                 db.session.commit()
@@ -1040,7 +1040,7 @@ def stats():
 ##                if j1['gameDuration'] < 360:
 ##
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=2, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=2, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
 ##                    db.session.add(u)
 ##                    db.session.commit()
 ##
@@ -1057,7 +1057,7 @@ def stats():
 ##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] + j1['participants'][pid1-1]['stats']['assists']
 ##
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=1, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=1, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1086,7 +1086,7 @@ def stats():
 ##                    p1soloplayedchamps.append(j1['participants'][pid1-1]['championId'])
 ##
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=0, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=0, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1174,7 +1174,7 @@ def stats():
 ##
 ##                if j1['gameDuration'] < 360:
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=2, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=2, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1199,7 +1199,7 @@ def stats():
 ##
 ##                    
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=1, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=1, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1221,7 +1221,7 @@ def stats():
 ##
 ##                    p2soloplayedchamps.append(j1['participants'][pid2-1]['championId'])
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=form.region.data, season=9, winorlose=0, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=region, season=9, winorlose=0, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -2435,7 +2435,7 @@ def stats():
     
 
                 
-    #main(form.summoner1.data, form.summoner2.data, form.region.data)
+    #main(form.summoner1.data, form.summoner2.data, region)
     #flash(p2soloplayedchampscount)
             
 
