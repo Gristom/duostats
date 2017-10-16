@@ -7,14 +7,14 @@
   <form action="" method="post" name="login">
       {{ form.hidden_tag() }}
       <p>
-          Please enter your Name:<br>
+          Your summoner name:<br>
           {{ form.summoner1(size=80) }}<br>
           {% for error in form.summoner1.errors %}
             <span style="color: red;">[{{ error }}]</span>
           {% endfor %}<br>
       </p>
       <p>
-          Please enter your Partner's Name:<br>
+          Partner's summoner name:<br>
           {{ form.summoner2(size=80) }}<br>
           {% for error in form.summoner2.errors %}
             <span style="color: red;">[{{ error }}]</span>
