@@ -319,6 +319,8 @@ def stats():
 
     global statsurl
 
+    global region
+
     winpercentcommon = 0
     winpercentp1solo = 0
     winpercentp2solo = 0
@@ -447,7 +449,7 @@ def stats():
 
     #Api Key to update
 
-    api = RiotAPI('RGAPI-d11e0daa-1612-4174-b159-276f535df131', RiotConsts.REGIONS[form.region.data])
+    api = RiotAPI('RGAPI-d11e0daa-1612-4174-b159-276f535df131', RiotConsts.REGIONS[region])
 
 
 
@@ -2584,8 +2586,12 @@ def login():
         global sum1name
         global sum2name
 
+        global regioncode
+
         sum1name = form.summoner1.data
         sum2name = form.summoner2.data
+
+        region = form.region.data
 
         statsurl = form.summoner1.data+form.summoner2.data+form.region.data
 
