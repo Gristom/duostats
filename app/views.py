@@ -541,7 +541,7 @@ def stats():
 
     sum2id = r2['accountId']
 
-    statsurl = form.summoner1.data+form.summoner2.data+form.region.data
+    
 
 
     dbmatchlistcommon = []
@@ -2580,6 +2580,10 @@ def stats():
 def login():
     form = LoginForm()
     if form.validate_on_submit():
+
+        global statsurl
+
+        statsurl = form.summoner1.data+form.summoner2.data+form.region.data
 
         return redirect(url_for('.stats', username=statsurl))
     return render_template('index.html',
