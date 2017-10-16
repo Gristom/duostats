@@ -438,8 +438,6 @@ def stats():
     global sum1name
     global sum2name
 
-    sum1name = form.summoner1.data
-    sum2name = form.summoner2.data
 
 
 
@@ -2582,6 +2580,12 @@ def login():
     if form.validate_on_submit():
 
         global statsurl
+
+        global sum1name
+        global sum2name
+
+        sum1name = form.summoner1.data
+        sum2name = form.summoner2.data
 
         statsurl = form.summoner1.data+form.summoner2.data+form.region.data
 
