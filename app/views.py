@@ -67,7 +67,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 @app.route('/stats/<username>')
-def stats():
+def stats(username):
 
 
 
