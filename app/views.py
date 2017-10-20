@@ -11,6 +11,10 @@ import re
 from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
+#are all the globals causing a mixup
+#static pages
+
+
 #What this program does
 
 #Return Match IDs
@@ -44,7 +48,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 #Premade stats for popular duos
 #Remove redundant calc of stats (not solo no duo)
 #Create way to periodically update active users
-#Recommended duos (based on played)? ie, Lux/Bard, Amumu/Miss Fortune, Malphite/Orianna, Elise/Renekton, Kayle/Master Yi, Tahm Kench/Jinx, Vayne/Anivia
+#Recommended duos (based on played)? ie, Lux/Bard, Amumu/Miss Fortune, Malphite/Orianna, Elise/Renekton, Kayle/Master Yi, Tahm Kench/Jinx, Vayne/Anivia, Shen/Ivern
 
 
 
@@ -62,7 +66,7 @@ def internal_error(error):
 
 
 
-@app.route('/stats')
+@app.route('/stats/<username>')
 def stats():
 
 
@@ -2593,9 +2597,9 @@ def login():
 
         region = form.region.data
 
-        statsurl = form.summoner1.data+form.summoner2.data+form.region.data
+        statsurl = form.summoner1.data+"and"+form.summoner2.data+form.region.data
 
-        return redirect(url_for('.stats', username=statsurl))
+        return redirect(url_for('stats', username=statsurl))
     return render_template('index.html',
                             title='Sign In',
                             form=form)
