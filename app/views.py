@@ -2597,7 +2597,7 @@ def login():
 
         statsurl = form.summoner1.data+"and"+form.summoner2.data+form.region.data
 
-        return redirect(url_for('stats', username=statsurl))
+        return redirect(url_for('stats', region=form.region.data, sum1name=form.summoner1.data, sum2name=form.summoner2.data))
     return render_template('index.html',
                             title='Sign In',
                             form=form)
