@@ -1,3 +1,3 @@
-#!root/flask/bin/python3.6
+#!flask/bin/python
 from app import app
-app.run(debug=True)
+app.run(threaded=True)
