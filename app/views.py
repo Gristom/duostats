@@ -66,8 +66,8 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 
-@app.route('/stats/<username>')
-def stats(username):
+@app.route('/stats/<region>/<sum1name>/<sum2name>')
+def stats(region, sum1name, sum2name):
 
 
 
@@ -323,7 +323,7 @@ def stats(username):
 
     global statsurl
 
-    global region
+    
 
     winpercentcommon = 0
     winpercentp1solo = 0
@@ -441,8 +441,6 @@ def stats(username):
 
     season = 9
 
-    global sum1name
-    global sum2name
 
 
 
