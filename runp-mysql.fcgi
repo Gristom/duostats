@@ -8,5 +8,4 @@ from flipflop import WSGIServer
 from app import app
 
 if __name__ == '__main__':
-    app.debug = True
-    WSGIServer(app).run()
+    WSGIServer(app).run(threaded=true)
