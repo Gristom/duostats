@@ -15,7 +15,7 @@ class LoginForm(Form):
 
     QUEUETYPE_ABBREV = ('Solo/Duo', 'Flex')
 
-    SEASON_ABBREV = ('Season 7 (2017)', 'Preseason 8', 'Season 8 (2018)') 
+    SEASON_ABBREV = ('Season 7', 'Preseason 8', 'Season 8') 
     
     region = SelectField(label='Region', 
     choices=[(region, region) for region in REGION_ABBREV])
