@@ -876,7 +876,7 @@ def stats(region, sum1name, sum2name, queue, season):
 
             if j1['gameDuration'] < 360:
 
-                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=2, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=2, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 db.session.add(u)
                 db.session.commit()
                 
@@ -919,7 +919,7 @@ def stats(region, sum1name, sum2name, queue, season):
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] + j1['participants'][pid2-1]['stats']['assists']
                 
-                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=1, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=1, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                 db.session.add(u)
                 db.session.commit()
@@ -958,7 +958,7 @@ def stats(region, sum1name, sum2name, queue, season):
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duodeaths'] + j1['participants'][pid2-1]['stats']['deaths']
                 cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] = cl2[str(j1['participants'][pid2-1]['championId'])]['Duoassists'] + j1['participants'][pid2-1]['stats']['assists']
 
-                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=0, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+                u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=0, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                 db.session.add(u)
                 db.session.commit()
@@ -1046,7 +1046,7 @@ def stats(region, sum1name, sum2name, queue, season):
 ##                if j1['gameDuration'] < 360:
 ##
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=2, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=2, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
 ##                    db.session.add(u)
 ##                    db.session.commit()
 ##
@@ -1063,7 +1063,7 @@ def stats(region, sum1name, sum2name, queue, season):
 ##                    cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] = cl1[str(j1['participants'][pid1-1]['championId'])]['Soloassists'] + j1['participants'][pid1-1]['stats']['assists']
 ##
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=1, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=1, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1092,7 +1092,7 @@ def stats(region, sum1name, sum2name, queue, season):
 ##                    p1soloplayedchamps.append(j1['participants'][pid1-1]['championId'])
 ##
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=0, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=0, soloduo=1, c1id=j1['participants'][pid1-1]['championId'], c2id=0, c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=0, c2d=0, c2a=0)
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1180,7 +1180,7 @@ def stats(region, sum1name, sum2name, queue, season):
 ##
 ##                if j1['gameDuration'] < 360:
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=2, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=2, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1205,7 +1205,7 @@ def stats(region, sum1name, sum2name, queue, season):
 ##
 ##                    
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=1, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=1, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
@@ -1227,7 +1227,7 @@ def stats(region, sum1name, sum2name, queue, season):
 ##
 ##                    p2soloplayedchamps.append(j1['participants'][pid2-1]['championId'])
 ##
-##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype == RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=0, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
+##                    u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = RiotConsts.QUEUETYPE[queue], season=RiotConsts.SEASON[season], winorlose=0, soloduo=2, c1id=0, c2id=j1['participants'][pid2-1]['championId'], c1k=0, c1d=0, c1a=0, c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
 ##                
 ##                    db.session.add(u)
 ##                    db.session.commit()
