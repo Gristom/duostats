@@ -10,9 +10,12 @@ class RiotAPI(object):
 
 
 
-    def __init__(self, api_key, region):
+    def __init__(self, api_key, region, queue, season):
         self.api_key = api_key 
         self.region = region
+        self.queue = queue
+        self.season = season
+        #last 2 here might not be necessary
 
     def _request(self, api_url, params={}):
         args = {'api_key': self.api_key}
@@ -416,11 +419,13 @@ class RiotAPI(object):
             )
         return self._request(api_url)
 
-    def get_match_history(self, summonerId, beginIndex):
+    def get_match_history(self, summonerId, beginIndex, queue, season):
         api_url = Consts.URL['match_history'].format(
             version=Consts.API_VERSIONS['matchlist'],
             summonerIds=summonerId,
-            beginIndexs=beginIndex
+            beginIndexs=beginIndex,
+            queues=queue,
+            seasons=season
             )
         return self._request(api_url)
 

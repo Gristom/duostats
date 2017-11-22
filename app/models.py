@@ -11,6 +11,7 @@ class User(db.Model):
     regioncode = db.Column(db.String(10), index=True)
     winorlose = db.Column(db.Integer, index=True) #(0=lose 1=win 2=remake)
     soloduo = db.Column(db.Integer, index=True) #(0=duo 1=p1solo 2=p2solo)
+    queuetype = db.Column(db.Integer, index=True) #(420=solo/duo 440=flex)
     c1id = db.Column(db.Integer, index=True)
     c2id = db.Column(db.Integer, index=True)
     c1k = db.Column(db.Integer, index=True)

@@ -2,7 +2,7 @@ URL = {
     'base': 'https://{proxy}.api.riotgames.com/lol/{url}',
     'summoner_by_name': 'summoner/v{version}/summoners/by-name/{names}',
     'ranked_stats': 'v{version}/stats/by-summoner/{summonerIds}/ranked',
-    'match_history': 'match/v{version}/matchlists/by-account/{summonerIds}?queue=420&beginIndex={beginIndexs}',
+    'match_history': 'match/v{version}/matchlists/by-account/{summonerIds}?queue={queues}&season={seasons}&beginIndex={beginIndexs}',
     'match_info': 'match/v{version}/matches/{matchIds}',
     'champ_list': 'static-data/v{version}/champions?locale=en_US&dataById=true'
 
@@ -36,5 +36,27 @@ REGIONS = {
     'LAN': 'la1',
     'LAS': 'la2'
     
+    
+}
+
+QUEUETYPE = {
+    'Solo/Duo': '420',
+    'Flex': '440',
+        
+}
+
+SEASON = {
+    'Preseason 3': '0',
+    'Season 3 (2013)': '1',
+    'Preseason 4': '2', 
+    'Season 4 (2014)': '3',
+    'Preseason 5': '4',
+    'Season 5 (2015)': '5',
+    'Preseason 6': '6',
+    'Season 6 (2016)': '7,
+    'Preseason 7)': '8,
+    'Season 7 (2017)': '9',
+    'Preseason 8': '10'
+    'Season 8 (2018)': '11',    
     
 }
