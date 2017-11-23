@@ -13,7 +13,7 @@ class LoginForm(Form):
 
     REGION_ABBREV = ('NA', 'EUW', 'EUNE', 'KR', 'RUS', 'BR', 'OCE', 'JP', 'TR', 'LAN', 'LAS')
 
-    QUEUETYPE_ABBREV = ('Solo%2FDuo', 'Flex')
+    QUEUETYPE_ABBREV = ('Solo and Duo', 'Flex')
 
     SEASON_ABBREV = ('Season 7', 'Preseason 8', 'Season 8') 
     
