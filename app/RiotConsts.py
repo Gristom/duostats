@@ -40,7 +40,7 @@ REGIONS = {
 }
 
 QUEUETYPE = {
-    'Solo/Duo': '420',
+    'Solo and Duo': '420',
     'Flex': '440',
         
 }
