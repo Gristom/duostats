@@ -20,8 +20,8 @@ class LoginForm(Form):
     region = SelectField(label='Region', 
     choices=[(region, region) for region in REGION_ABBREV])
 
-    queuetype = SelectField(label='Queue Type', 
-    choices=[(queuetype, queuetype) for queuetype in QUEUETYPE_ABBREV])
+    queue = SelectField(label='Queue Type', 
+    choices=[(queue, queue) for queue in QUEUETYPE_ABBREV])
 
     season = SelectField(label='Season', 
     choices=[(season, season) for season in SEASON_ABBREV])
