@@ -547,7 +547,7 @@ def stats(region, sum1name, sum2name, queue, season):
     
     except KeyError:
 
-        return redirect(url_for('name1_error', error=500))
+        return render_template('501.html')
 
     print(r1['accountId'])
 
