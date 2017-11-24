@@ -562,7 +562,7 @@ def stats(region, sum1name, sum2name, queue, season):
 
     except KeyError:
 
-        return redirect(url_for('name2_error', error=500))
+        return render_template('502.html')
 
     
 
@@ -709,7 +709,7 @@ def stats(region, sum1name, sum2name, queue, season):
 
         else:
 
-            print('Error winlose 0, 1 or 2 expected')
+            print("Error winlose 0, 1 or 2 expected")
     
 
     #Get match ids for sum1
@@ -786,7 +786,11 @@ def stats(region, sum1name, sum2name, queue, season):
 
     #Find win percent when duo
 
-    if not matchlistcommon:
+    if not matchlistcommon and matchlistdb:
+
+        return render_template('503.html')        
+
+    elif not matchlistcommon:
 
         print("no new matches to check")
 
