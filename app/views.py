@@ -786,7 +786,7 @@ def stats(region, sum1name, sum2name, queue, season):
 
     #Find win percent when duo
 
-    if not matchlistcommon and matchlistdb:
+    if not matchlistcommon and not matchlistdb:
 
         return render_template('503.html')        
 
