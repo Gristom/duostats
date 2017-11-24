@@ -8,8 +8,8 @@ class LoginForm(Form):
 
     
     
-    summoner1 = StringField('Name 1', validators=[DataRequired(), validators.length(max=16)])
-    summoner2 = StringField('Name 2', validators=[DataRequired(), validators.length(max=16)])   
+    summoner1 = StringField('Name 1', validators=[DataRequired(), length(max=16)])
+    summoner2 = StringField('Name 2', validators=[DataRequired(), length(max=16)])   
 
     REGION_ABBREV = ('NA', 'EUW', 'EUNE', 'KR', 'RUS', 'BR', 'OCE', 'JP', 'TR', 'LAN', 'LAS')
 
