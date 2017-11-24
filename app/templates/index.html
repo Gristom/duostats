@@ -8,14 +8,14 @@
       {{ form.hidden_tag() }}
       <p>
           Your summoner name:<br>
-          {{ form.summoner1(size=80) }}<br>
+          {{ form.summoner1(size=20) }}<br>
           {% for error in form.summoner1.errors %}
             <span style="color: red;">[{{ error }}]</span>
           {% endfor %}<br>
       </p>
       <p>
           Partner's summoner name:<br>
-          {{ form.summoner2(size=80) }}<br>
+          {{ form.summoner2(size=20) }}<br>
           {% for error in form.summoner2.errors %}
             <span style="color: red;">[{{ error }}]</span>
           {% endfor %}<br>
