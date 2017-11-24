@@ -777,7 +777,6 @@ def stats(region, sum1name, sum2name, queue, season):
     print("")
     print(matchlistcommon)
 
-
     #Create solo (uncommon) match list
 
 ##        matchlistsolo1 = sorted([x for x in matchlist1 if x not in matchlistcommon], reverse=True)
@@ -786,7 +785,7 @@ def stats(region, sum1name, sum2name, queue, season):
 
     #Find win percent when duo
 
-    if not matchlistcommon and not matchlistdb:
+    if not matchlistcommon and not matchhistorydb:
 
         return render_template('503.html')        
 
