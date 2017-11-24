@@ -57,15 +57,15 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 
-##@app.errorhandler(404)
-##def not_found_error(error):
-##    return render_template('404.html'), 404
-##
-##
-##@app.errorhandler(500)
-##def internal_error(error):
-##    db.session.rollback()
-##    return render_template('500.html'), 500
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_error(error):
+    db.session.rollback()
+    return render_template('500.html'), 500
 
 
 
@@ -533,6 +533,8 @@ def stats(region, sum1name, sum2name, queue, season):
 
     #Get Summoner1name
 
+    
+
     r1 = api.get_summoner_by_name(sum1name)
     
 
@@ -542,7 +544,7 @@ def stats(region, sum1name, sum2name, queue, season):
     
     except KeyError:
 
-        return render_template('500.html'), 500
+        return redirect(url_for('internal_error'))
 
     print(r1['accountId'])
 
@@ -557,7 +559,9 @@ def stats(region, sum1name, sum2name, queue, season):
 
     except KeyError:
 
-        return render_template('500.html'), 500    
+        return redirect(url_for('internal_error'))
+
+    
 
     print(r2['accountId'])
     
