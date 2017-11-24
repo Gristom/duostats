@@ -536,16 +536,27 @@ def stats(region, sum1name, sum2name, queue, season):
     r1 = api.get_summoner_by_name(sum1name)
     print(r1['accountId'])
 
-    sum1id = r1['accountId']
+    try:
+
+        sum1id = r1['accountId']
     
+    except KeyError:
+
+        return render_template('500.html'), 500
+
+
     #Get Summoner2name
     
     r2 = api.get_summoner_by_name(sum2name)
     print(r2['accountId'])
 
-    sum2id = r2['accountId']
+    try:
 
-    
+        sum2id = r2['accountId']
+
+    except KeyError:
+
+        return render_template('500.html'), 500    
 
 
     dbmatchlistcommon = []
