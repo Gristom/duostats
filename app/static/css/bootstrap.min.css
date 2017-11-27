@@ -11,7 +11,7 @@ table.minimalistBlack td, table.minimalistBlack th {
 table.minimalistBlack tbody td {
   font-size: 20px;
 }
-table.minimalistBlack td:nth-child(even) {
+table.minimalistBlack tr:nth-child(even) {
   background: #D0E4F5;
 }
 table.minimalistBlack thead {
