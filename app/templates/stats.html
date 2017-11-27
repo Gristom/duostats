@@ -6,9 +6,9 @@
     <thead>
     <tr>
     
-    <th width="200">{{ user.nickname }}</th>
-    <th width="200">{{ user.nickname2 }}</th>
-    <th>Games Played</th>
+    <th>{{ user.nickname }}</th>
+    <th>{{ user.nickname2 }}</th>
+    <th>Played</th>
     <th>Win %</th>
    
     </tr>
@@ -28,8 +28,8 @@
     <tbody>
     <tr>
 
-    <td>{{ post.kda1commonoutput }}<br><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60"></img><br>{{ post.kda1commonoutput2 }}</td>
-    <td>{{ post.kda2commonoutput }}<br><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="60" width="60"><br>{{ post.kda2commonoutput2 }}</img></td>
+    <td>{{ post.kda1commonoutput }}<br><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60"></img><br>{{ post.kda1commonoutput2 }} KDA</td>
+    <td>{{ post.kda2commonoutput }}<br><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="60" width="60"><br>{{ post.kda2commonoutput2 }} KDA</img></td>
     <td>{{ post.gpcommonoutput }}</td>
     <td>{{ post.commonwroutput }}%</td>
      
