@@ -1984,8 +1984,8 @@ def stats(region, sum1name, sum2name, queue, season):
         kda1common.append(str(Decimal(cl1[c1common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
         kda2common.append(str(Decimal(cl2[c2common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
         
-        kda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-        kda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+        kda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+        kda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['DuoKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
 
 
         try:
@@ -1993,8 +1993,8 @@ def stats(region, sum1name, sum2name, queue, season):
             solokda1common.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
             solokda2common.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
             
-            solokda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-            solokda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+            solokda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            solokda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['SoloKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
 
             solok1common.append(str(Decimal(cl1[c1common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
             solok2common.append(str(Decimal(cl2[c2common[i]]['Soloavgk']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
@@ -2064,8 +2064,8 @@ def stats(region, sum1name, sum2name, queue, season):
         allkda1common.append(str(Decimal(cl1[c1common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
         allkda2common.append(str(Decimal(cl2[c2common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
         
-        allkda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
-        allkda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))+" K/D/A")
+        allkda1commonoutput2.append(str(Decimal(cl1[c1common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+        allkda2commonoutput2.append(str(Decimal(cl2[c2common[i]]['AllKDA']).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
 
 
 
