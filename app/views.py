@@ -16,7 +16,6 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 #What this program does
-
 #Return Match IDs
 #Check for IDs that match
 #Confirm match is ranked solo
@@ -1771,7 +1770,7 @@ def stats(region, sum1name, sum2name, queue, season):
         playedchampsind.append(playedchampskeys[i].translate(str.maketrans('','','[](){}<>,')))
         playedchampsind[i] = playedchampsind[i].split()
         gpcommon.append(playedchampscount[playedchampskeys[i]])
-        gpcommonoutput.append(str(playedchampscount[playedchampskeys[i]])+" Played")
+        gpcommonoutput.append(str(playedchampscount[playedchampskeys[i]]))
 
 ##        for i in range(len(p1soloplayedchampskeys)):
 ##            
@@ -1883,8 +1882,8 @@ def stats(region, sum1name, sum2name, queue, season):
 
     for key in playedchampskeys:
         try:
-            commonwr.append(str(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
-            commonwroutput.append(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
+            commonwr.append(str(Decimal((winratecommon[key])*100).quantize(Decimal('.1'), rounding=ROUND_HALF_UP)))
+            commonwroutput.append(Decimal((winratecommon[key])*100).quantize(Decimal('.1'), rounding=ROUND_HALF_UP))
         except ZeroDivisionError:
             print("not enough games played")
         except KeyError:
