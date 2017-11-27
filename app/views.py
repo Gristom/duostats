@@ -1884,7 +1884,7 @@ def stats(region, sum1name, sum2name, queue, season):
     for key in playedchampskeys:
         try:
             commonwr.append(str(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
-            commonwroutput.append(str(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
+            commonwroutput.append(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))
         except ZeroDivisionError:
             print("not enough games played")
         except KeyError:
