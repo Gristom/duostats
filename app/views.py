@@ -31,6 +31,8 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 #Features/fixes to add
 
+#Post to twitter/facebook
+
 #Error handler same name put twice
 
 #Add Flex Queue Support
@@ -49,7 +51,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 #Highest win % Champion Duo and KDA
 #Most played champs with KDA both solo and duo
 #Summoner name and icon at top of stats window
-#Premade stats for popular duos
+#Premade stats links for popular duos
 #Remove redundant calc of stats (not solo no duo)
 #Create way to periodically update active users
 #Recommended duos (based on played)? ie, Lux/Bard, Amumu/Miss Fortune, Malphite/Orianna, Elise/Renekton, Kayle/Master Yi, Tahm Kench/Jinx, Vayne/Anivia, Shen/Ivern, Bard/Veigar
@@ -1882,7 +1884,7 @@ def stats(region, sum1name, sum2name, queue, season):
     for key in playedchampskeys:
         try:
             commonwr.append(str(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
-            commonwroutput.append(str(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP))+"%")
+            commonwroutput.append(str(Decimal((winratecommon[key])*100).quantize(Decimal('1'), rounding=ROUND_HALF_UP)))
         except ZeroDivisionError:
             print("not enough games played")
         except KeyError:
