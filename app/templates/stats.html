@@ -6,21 +6,47 @@
     <thead>
     <tr>
     <th>{{ user.nickname }}</th>
-    <th><font size="25px">{{ user.duowinpercent }}%</font></br>{{ user.gamecount }} Played</th>
+    <th>K/D/A</th>
+    <th>KDA</th>
     <th>{{ user.nickname2 }}</th>
+    <th>K/D/A</th>
+    <th>KDA</th>
+    <th>Games Played</th>
+    <th>Win %</th>
+
+    <th><font size="25px">{{ user.duowinpercent }}%</font></br>{{ user.gamecount }} Played</th>
+
    
     </tr>
     </thead>
+
+    <tr>	
+
+    <td>All</td>
+    <td>WIP</td>
+    <td>WIP</td>
+    <td>All</td>
+    <td>WIP</td>
+    <td>WIP</td>
+    <td>{{ user.gamecount }}</td>
+    <td>{{ user.duowinpercent }}%</td>
+
+    </tr>	
 
     {% for post in posts %} 
 
     <tbody>
     <tr>
-    
-    <td width=35%>{{ post.champ }} <br/><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="80" width="80"><br/>{{ post.kda1commonoutput }}</br>{{ post.kda1commonoutput2 }}</td>
-    <td width=30%><font size="25px"><b>{{ post.commonwroutput }}</font></b></td>
-    <td width=35%>{{ post.champ2 }} <br/><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="80" width="80"><br/>{{ post.kda2commonoutput }}</br>{{ post.kda2commonoutput2 }}</td>
-    
+
+    <td><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="80" width="80"></img></td>
+    <td>{{ post.kda1commonoutput }}</td>
+    <td>{{ post.kda1commonoutput2 }}</td>
+    <td>{{ post.champ2 }} <br/><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="80" width="80"></img></td>
+    <td>{{ post.kda2commonoutput }}</td>
+    <td>{{ post.kda2commonoutput2 }}</td>
+    <td>{{ user.gamecount }}</td>
+    <td>{{ post.commonwroutput }}</td>
+     
     </tr>	
 
     {% endfor %}
