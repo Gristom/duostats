@@ -4,23 +4,27 @@
 
     <table class="minimalistBlack sortable">
     <thead>
-    <tr><th>{{ user.nickname }}</th></tr>
-    <tr><th><font size="25px">{{ user.duowinpercent }}%</font></br>{{ user.gamecount }} Played</th></tr>
-    <tr><th>{{ user.nickname2 }}</th></tr>
+    <tr>
+    <th>{{ user.nickname }}</th>
+    <th><font size="25px">{{ user.duowinpercent }}%</font></br>{{ user.gamecount }} Played</th>
+    <th>{{ user.nickname2 }}</th>
    
+    </tr>
     </thead>
 
     {% for post in posts %} 
 
     <tbody>
-
+    <tr>
     
-    <tr><td width=35%>{{ post.champ }} <br/><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="80" width="80"><br/>{{ post.kda1commonoutput }}</br>{{ post.kda1commonoutput2 }}</td></tr>
-    <tr><td width=30%><font size="25px"><b>{{ post.commonwroutput }}</font></b></td></tr>
-    <tr><td width=35%>{{ post.champ2 }} <br/><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="80" width="80"><br/>{{ post.kda2commonoutput }}</br>{{ post.kda2commonoutput2 }}</td></tr>
-
+    <td width=35%>{{ post.champ }} <br/><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="80" width="80"><br/>{{ post.kda1commonoutput }}</br>{{ post.kda1commonoutput2 }}</td>
+    <td width=30%><font size="25px"><b>{{ post.commonwroutput }}</font></b></td>
+    <td width=35%>{{ post.champ2 }} <br/><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="80" width="80"><br/>{{ post.kda2commonoutput }}</br>{{ post.kda2commonoutput2 }}</td>
+    
+    </tr>	
 
     {% endfor %}
+    
     
     </tbody>
     </table>
