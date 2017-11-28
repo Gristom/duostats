@@ -12,7 +12,7 @@ table.minimalistBlack tbody td {
   font-size: 20px;
 }
 table.minimalistBlack tr:nth-child(even) {
-  background: #F9FAFC;
+  background: #E5E6E8;
 }
 table.minimalistBlack thead {
   background: #CFCFCF;
