@@ -4,6 +4,7 @@
 
     <table class="minimalistBlack sortable">
     <thead>
+
     <tr>
     
     <th><font size="3">{{ user.nickname }}</font></th>
@@ -23,11 +24,13 @@
 
     </tr>
 
-    </thead>	
+    </thead>
+
+    <tbody>		
 
     {% for post in posts %} 
 
-    <tbody>
+    
     <tr>
 
     <td><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60"></img></td>
