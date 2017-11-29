@@ -6,7 +6,7 @@ table.minimalistBlack {
 }
 table.minimalistBlack td, table.minimalistBlack th {
   border: 1px solid #000000;
-  padding: 1px 1px;
+  padding: 1px 0px;
 }
 table.minimalistBlack tbody td {
   font-size: 20px;
