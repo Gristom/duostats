@@ -57,7 +57,7 @@ body {
   font-weight: normal;
   list-style: none;
   display: inline-block;
-  width: 20%;
+  width: 16%;
   box-sizing: border-box;
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
