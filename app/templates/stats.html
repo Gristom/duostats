@@ -26,46 +26,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
-
-{% block content %}
-
-
-   <section class="wrapper">
-    <!-- Row title -->
-    <main class="row title">
-      <ul>
-        <li>{{ user.nickname }}</li>
-        <li>KDA</li>
-        <li>{{ user.nickname2 }}</li>
-        <li>KDA</li>
-        <li>Played</li>
-        <li>Win %</li>
-      </ul>
-    </main>
+  <body>
 
 
-    {% for post in posts %} 
+     {% block content %}
 
-    <!-- Row 3 -->
-    <article class="row nfl">
-      <ul>
-        <li><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60"></img></li>
-        <li>{{ post.kda1commonoutput }}<br>{{ post.kda1commonoutput2 }} KDA</li>
-        <li><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="60" width="60"></img></li>
-        <li>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</li>
-        <li>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</li>
-        <li>{{ post.commonwroutput }}%</li>
-      </ul>
-      <ul class="more-content">
-        <li>Additional Stats coming soon!</li>
-      </ul>
-    </article>
 
-    {% endfor %}
+     <section class="wrapper">
+      <!-- Row title -->
+      <main class="row title">
+        <ul>
+          <li>{{ user.nickname }}</li>
+          <li>KDA</li>
+          <li>{{ user.nickname2 }}</li>
+          <li>KDA</li>
+          <li>Played</li>
+          <li>Win %</li>
+        </ul>
+      </main>
+
+
+      {% for post in posts %} 
+
+      <!-- Row 3 -->
+      <article class="row nfl">
+        <ul>
+          <li><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60"></img></li>
+          <li>{{ post.kda1commonoutput }}<br>{{ post.kda1commonoutput2 }} KDA</li>
+          <li><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="60" width="60"></img></li>
+          <li>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</li>
+          <li>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</li>
+          <li>{{ post.commonwroutput }}%</li>
+        </ul>
+        <ul class="more-content">
+          <li>Additional Stats coming soon!</li>
+        </ul>
+      </article>
+
+      {% endfor %}
 
   
-  </section>
+    </section>
 
-{% endblock %}
+
+
+    {% endblock %}
+
+  </body>
 
 </html>
