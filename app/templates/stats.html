@@ -2,49 +2,40 @@
 {% block content %}
 
 
-    <table class="minimalistBlack sortable">
-    <thead>
+  <section class="wrapper">
+    <!-- Row title -->
+    <main class="row title">
+      <ul>
+        <li>{{ user.nickname }}</li>
+        <li>KDA</li>
+        <li>{{ user.nickname2 }}</li>
+        <li>KDA</li>
+        <li>Played</li>
+        <li>Win %</li>
+      </ul>
+    </main>
 
-    <tr>
-    
-    <th><font size="3">{{ user.nickname }}</font></th>
-    <th><font size="3">{{ user.nickname2 }}</font></th>
-    <th><font size="3">Played</font></th>
-    <th><font size="3">Win %</font></th>
-   
-    </tr>
-    
-
-    <tr>	
-
-    <th bgcolor="#CFCFCF"></th>
-    <th bgcolor="#CFCFCF">Total: </th>
-    <th bgcolor="#CFCFCF">{{ user.gamecount }}</th>
-    <th bgcolor="#CFCFCF">{{ user.duowinpercent }}%</th>
-
-    </tr>
-
-    </thead>
-
-    <tbody>		
 
     {% for post in posts %} 
 
-    
-    <tr>
-
-    <td><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60" align="middle" ></img><br><p>{{ post.kda1commonoutput }}<br>{{ post.kda1commonoutput2 }} KDA</p></td>
-    <td><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="60" width="60" align="middle"></img><br><p>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</p></td>
-    <td>{{ post.gpcommonoutput }}</td>
-    <td>{{ post.commonwroutput }}%</td>
-     
-    </tr>	
+    <!-- Row 3 -->
+    <article class="row nfl">
+      <ul>
+        <li><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60"></img></li>
+        <li>{{ post.kda1commonoutput }}<br>{{ post.kda1commonoutput2 }} KDA</li>
+        <li><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="60" width="60"></img></li>
+        <li>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</li>
+        <li>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</li>
+        <li>{{ post.commonwroutput }}%</li>
+      </ul>
+      <ul class="more-content">
+        <li>Additional Stats coming soon!</li>
+      </ul>
+    </article>
 
     {% endfor %}
-    
-    
-    </tbody>
-    </table>
+
+  
+  </section>
 
 {% endblock %}
-
