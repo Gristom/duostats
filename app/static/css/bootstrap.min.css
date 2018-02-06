@@ -100,16 +100,16 @@ body {
 }
 .row:hover {
   background-color: rgba(26, 26, 26, 0.9);
-  height: 85px;
+  height: 60px;
 }
 @media only screen and (max-width: 767px) {
   .row:hover {
-    height: 85px;
+    height: 60px;
   }
 }
 @media only screen and (max-width: 359px) {
   .row:hover {
-    height: 105px;
+    height: 60px;
   }
 }
 .title {
