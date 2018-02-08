@@ -63,9 +63,7 @@ body {
   vertical-align: middle;
   text-align: center;
   height: 100%;
-  position: relative;
-  top: 75%;
-  transform: translateY(-50%);
+
 
 }
 @media only screen and (max-width: 767px) and (min-width: 480px) {
