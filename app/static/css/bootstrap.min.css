@@ -48,7 +48,7 @@ body {
 }
 /* lists */
 .row ul {
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 .row ul li {
