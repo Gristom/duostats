@@ -39,7 +39,7 @@ body {
 .wrapper {
   width: 100%;
   max-width: 1000px;
-  margin: 20px auto 100px auto;
+  margin: auto auto auto auto;
   padding: 0;
   background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.9);
@@ -115,16 +115,16 @@ body {
 }
 .row:hover {
   background-color: rgba(26, 26, 26, 0.9);
-  height: 45px;
+  height: 50px;
 }
 @media only screen and (max-width: 767px) {
   .row:hover {
-    height: 45px;
+    height: 50px;
   }
 }
 @media only screen and (max-width: 359px) {
   .row:hover {
-    height: 45px;
+    height: 50px;
   }
 }
 .title {
