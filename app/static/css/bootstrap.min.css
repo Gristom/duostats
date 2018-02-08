@@ -105,7 +105,7 @@ body {
 /* rows */
 .row {
   padding: 20px 0;
-  height: 45px;
+  height: 70px;
   font-size: 0;
   position: relative;
   overflow: hidden;
@@ -115,27 +115,27 @@ body {
 }
 .row:hover {
   background-color: rgba(26, 26, 26, 0.9);
-  height: 50px;
+  height: 70px;
 }
 @media only screen and (max-width: 767px) {
   .row:hover {
-    height: 50px;
+    height: 70px;
   }
 }
 @media only screen and (max-width: 359px) {
   .row:hover {
-    height: 50px;
+    height: 70;px;
   }
 }
 .title {
   padding: 25px 0 5px 0;
-  height: 45px;
+  height: 70px;
   font-size: 0;
   background-color: rgba(255, 255, 255, 0.1);
   border-left: 3px solid rgba(255, 255, 255, 0.1);
 }
 .title:hover {
-  height: 45px;
+  height: 70px;
   background-color: rgba(255, 255, 255, 0.1);
   border-left: 3px solid rgba(255, 255, 255, 0.1);
 }
