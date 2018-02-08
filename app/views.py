@@ -27,18 +27,16 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 
-
+#lolduo partner?
 #Features/fixes to add
+
+#Last 20 games
 
 #Post to twitter/facebook
 
 #Error handler same name put twice
 
-#Add Flex Queue Support
-
 #Rate limit headers
-#Add Season qualifyer to URL (SEASON 2017 only), and add to db
-#Cache remakes
 #Flash amount of games to check etc
 
 #Compare to win loss ratio for solo games to duo games
@@ -2645,5 +2643,9 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+
+    return render_template('contact.html')
      
     
