@@ -26,28 +26,6 @@
 
   <body>
 
-  <div>
-
-  <a href="/">Home</a>&nbsp
-  <a href="/about">About</a>
-
-
-  </div>
-
-
-    <hr>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul>
-        {% for message in messages %}
-            <li>{{ message }} </li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
-    {% block content %}{% endblock %}
-  </body>
-</html>
 
 <p style="color:black", align="center">{{ user.gamecount }} Played, Overall Win Rate {{ user.duowinpercent }}%</p>
 
