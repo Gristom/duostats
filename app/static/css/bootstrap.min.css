@@ -112,9 +112,10 @@ body {
   overflow: hidden;
   transition: all 0.2s ease-out;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .row:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   height: 50px;
 }
 @media only screen and (max-width: 767px) {
@@ -132,12 +133,12 @@ body {
   height: 45px;
   font-size: 0;
   background-color: rgba(0, 0, 0, 0.1);
-  border-left: 3px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
 }
 .title:hover {
   height: 45px;
   background-color: rgba(0, 0, 0, 0.1);
-  border-left: 3px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
 }
 @media only screen and (max-width: 767px) {
   .title-hide {
