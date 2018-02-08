@@ -4,7 +4,8 @@
 /* body */
 body {
   background: rgba(0, 0, 0, 0.0);
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;\
+  color: black;
 }
 /* links */
 .nfl a, .mlb a, .nhl a, .pga a {
