@@ -59,6 +59,7 @@ body {
   content: "";
   display: inline-block;
   width: 16%;
+  line-height: 1.5;
   box-sizing: border-box;
   vertical-align: middle;
   text-align: center;
