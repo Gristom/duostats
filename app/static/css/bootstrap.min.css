@@ -105,25 +105,26 @@ body {
 /* rows */
 .row {
   padding: 20px 0;
-  height: 50px;
+  height: 45px;
   font-size: 0;
   position: relative;
   overflow: hidden;
   transition: all 0.2s ease-out;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+  vertical-align: middle;
 }
 .row:hover {
   background-color: rgba(26, 26, 26, 0.9);
-  height: 50px;
+  height: 45px;
 }
 @media only screen and (max-width: 767px) {
   .row:hover {
-    height: 50px;
+    height: 45px;
   }
 }
 @media only screen and (max-width: 359px) {
   .row:hover {
-    height: 50px;
+    height: 45px;
   }
 }
 .title {
