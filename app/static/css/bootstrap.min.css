@@ -39,7 +39,7 @@ body {
 .wrapper {
   width: 100%;
   max-width: 1000px;
-  margin: auto auto auto auto;
+  margin: auto;
   padding: 0;
   background: rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.9);
