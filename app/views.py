@@ -2648,4 +2648,7 @@ def contact():
 
     return render_template('contact.html')
      
-    
+@app.route('/ddw', methods=['GET', 'POST'])
+def ddw():
+
+    return render_template('ddw.html')   
