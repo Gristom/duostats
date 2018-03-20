@@ -11,6 +11,10 @@ import re
 from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
+#failsafe to not write to db in case of error
+#data being duplicated if a problem arises
+
+
 #are all the globals causing a mixup
 #static pages
 
@@ -901,7 +905,8 @@ def stats(region, sum1name, sum2name, queue, season):
 
                 u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = queue, season=season, winorlose=2, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 db.session.add(u)
-                db.session.commit()
+                #Moved to end
+                #db.session.commit()
                 
                 gamecountcommon=gamecountcommon
 
@@ -945,7 +950,8 @@ def stats(region, sum1name, sum2name, queue, season):
                 u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = queue, season=season, winorlose=1, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                 db.session.add(u)
-                db.session.commit()
+                #Moved to end
+                #db.session.commit()
 
                 wincountcommon=wincountcommon+1
                 gamecountcommon=gamecountcommon+1
@@ -984,7 +990,8 @@ def stats(region, sum1name, sum2name, queue, season):
                 u = User(summoner1id=sum1id, summoner2id=sum2id, matchid=str(j1['gameId']), regioncode=RiotConsts.REGIONS[region], queuetype = queue, season=season, winorlose=0, soloduo=0, c1id=j1['participants'][pid1-1]['championId'], c2id=j1['participants'][pid2-1]['championId'], c1k=j1['participants'][pid1-1]['stats']['kills'], c1d=j1['participants'][pid1-1]['stats']['deaths'], c1a=j1['participants'][pid1-1]['stats']['assists'], c2k=j1['participants'][pid2-1]['stats']['kills'], c2d=j1['participants'][pid2-1]['stats']['deaths'], c2a=j1['participants'][pid2-1]['stats']['assists'])
                 
                 db.session.add(u)
-                db.session.commit()
+                #Moved to End
+                #db.session.commit()
 
                 
                 gamecountcommon=gamecountcommon+1
@@ -2596,7 +2603,7 @@ def stats(region, sum1name, sum2name, queue, season):
             
         )
 
-
+    db.session.commit()
          
     return render_template("stats.html",
                            title='Stats',
