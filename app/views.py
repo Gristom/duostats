@@ -65,20 +65,20 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 
 
 
-@app.errorhandler(404)
-def not_found_error(error):
-    return render_template('404.html')#, 404
-
-
-@app.errorhandler(500)
-def name1_error(error):
-    db.session.rollback()
-    return render_template('501.html')#, 500
-
-@app.errorhandler(500)
-def name2_error(error):
-    db.session.rollback()
-    return render_template('502.html')#, 500
+##@app.errorhandler(404)
+##def not_found_error(error):
+##    return render_template('404.html')#, 404
+##
+##
+##@app.errorhandler(500)
+##def name1_error(error):
+##    db.session.rollback()
+##    return render_template('501.html')#, 500
+##
+##@app.errorhandler(500)
+##def name2_error(error):
+##    db.session.rollback()
+##    return render_template('502.html')#, 500
 
 
 @app.route('/stats/<region>/<sum1name>/<sum2name>/<queue>/<season>')
