@@ -2664,4 +2664,9 @@ def contact():
 @app.route('/ddw', methods=['GET', 'POST'])
 def ddw():
 
-    return render_template('ddw.html')   
+    return render_template('ddw.html')
+
+@app.route('/varus', methods=['GET', 'POST'])
+def varus():
+
+    return render_template('varus.html') 
