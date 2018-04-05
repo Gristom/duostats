@@ -2666,7 +2666,7 @@ def ddw():
 
     return render_template('ddw.html')
 
-@app.route('/varus', methods=['GET', 'POST'])
-def varus():
+@app.route('/xayah', methods=['GET', 'POST'])
+def xayah():
 
-    return render_template('varus.html') 
+    return render_template('xayah') 
