@@ -2666,6 +2666,12 @@ def ddw():
 
     return render_template('ddw.html')
 
+@app.route('/synergy', methods=['GET', 'POST'])
+def synergy():
+
+    return render_template('synergy.html') 
+
+
 @app.route('/xayah', methods=['GET', 'POST'])
 def xayah():
 
