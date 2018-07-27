@@ -333,6 +333,8 @@ img {
     height: auto;
 }
 
+
+
 input[type=text]
 
 {
@@ -352,6 +354,7 @@ input[type=text]
 select {
   
   border: none;
+  border-color: rgba(0,0,0,.15);
   border-radius: 4px;
   background-color: #f1f1f1;
 }
@@ -364,9 +367,10 @@ input[type=button], input[type=submit], input[type=reset]
   border: yes;
   border-style: outset;
   color: white;
-  padding: 16px 32px;
+  padding: 8px 16px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  font-size: 16px;
   
 }
