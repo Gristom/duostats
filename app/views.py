@@ -2649,6 +2649,12 @@ def login():
                             title='Sign In',
                             form=form)
 
+@app.route('/sitemap.xml')
+def sitemap():
+    url_root = request.url_root[:-1]
+    rules = app.url_map.iter_rules()
+    return render_template('sitemap.xml', url_root=url_root, rules=rules)
+
     
 @app.route('/about', methods=['GET', 'POST'])
 def about():
