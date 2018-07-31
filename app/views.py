@@ -80,7 +80,7 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 ##    db.session.rollback()
 ##    return render_template('502.html')#, 500
 
-
+@app.route('/stats)
 @app.route('/stats/<region>/<sum1name>/<sum2name>/<queue>/<season>')
 def stats(region, sum1name, sum2name, queue, season):
 
@@ -2615,6 +2615,7 @@ def stats(region, sum1name, sum2name, queue, season):
                            user=user,
                            posts=posts
                            )
+    
 
 @app.route('/', methods=['GET', 'POST'])
 @app.route('/index', methods=['GET', 'POST'])
@@ -2649,11 +2650,32 @@ def login():
                             title='Sign In',
                             form=form)
 
-@app.route('/sitemap.xml')
-def sitemap():
-    url_root = request.url_root[:-1]
-    rules = app.url_map.iter_rules()
-    return render_template('sitemap.xml', url_root=url_root, rules=rules)
+
+#doesnt do anything currently
+
+##@app.route('/sitemap.xml', methods=['GET'])
+##def sitemap():
+##    try:
+##      """Generate sitemap.xml. Makes a list of urls and date modified."""
+##      pages=[]
+##      ten_days_ago=(datetime.now() - timedelta(days=7)).date().isoformat()
+##      # static pages
+##      for rule in app.url_map.iter_rules():
+##          if "GET" in rule.methods and len(rule.arguments)==0:
+##              pages.append(
+##                           ["http://pythonprogramming.net"+str(rule.rule),ten_days_ago]
+##                           )
+##
+##      sitemap_xml = render_template('sitemap_template.xml', pages=pages)
+##      response= make_response(sitemap_xml)
+##      response.headers["Content-Type"] = "application/xml"    
+##    
+##      return response
+##    except Exception as e:
+##        return(str(e))
+
+
+
 
     
 @app.route('/about', methods=['GET', 'POST'])
