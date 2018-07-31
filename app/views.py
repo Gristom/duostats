@@ -80,8 +80,8 @@ from decimal import Decimal, ROUND_HALF_UP, ROUND_UP
 ##    db.session.rollback()
 ##    return render_template('502.html')#, 500
 
-@app.route('/stats')
-#@app.route('/stats/<region>/<sum1name>/<sum2name>/<queue>/<season>')
+#@app.route('/stats')
+@app.route('/stats/<region>/<sum1name>/<sum2name>/<queue>/<season>')
 def stats(region, sum1name, sum2name, queue, season):
 
 
