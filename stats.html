@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+
+  <body>
+
+
+
+  <p style="color:black", align="center">{{ user.gamecount }} Played, Overall Win Rate {{ user.duowinpercent }}%</p>
+
+
+  <iframe src="//rcm-na.amazon-adsystem.com/e/cm?o=15&p=48&l=ur1&category=amazonhomepage&f=ifr&linkID=ef5ed9584b62efc0c2b020c0a8a1011e&t=gristom-20&tracking_id=gristom-20" width="728" height="90" scrolling="no" border="0" marginwidth="0" style="border:none;" frameborder="0"></iframe>
+
+
+     <section class="wrapper">
+      <!-- Row title -->
+      <main class="row title">
+        <ul>
+          <li>{{ user.nickname }}</li>
+	  <li>	
+          <li>{{ user.nickname2 }}</li>
+	  <li>
+          <li>Played</li>
+          <li>Win %</li
+        </ul>
+      </main>
+
+
+      {% for post in posts %} 
+
+      <!-- Row 3 -->
+      <article class="row nfl">
+        <ul>
+          <li><img src="http://duostats.gg/static/{{ post.champnumber1 }}.png" alt="{{ post.champ }}" height="60" width="60"></img></li>
+          <li>{{ post.kda1commonoutput }}<br>{{ post.kda1commonoutput2 }} KDA</li>
+          <li><img src="http://duostats.gg/static/{{ post.champnumber2 }}.png" alt="{{ post.champ2 }}" height="60" width="60"></img></li>
+          <li>{{ post.kda2commonoutput }}<br>{{ post.kda2commonoutput2 }} KDA</li>
+          <li>{{ post.gpcommonoutput }}</li>
+          <li>{{ post.commonwroutput }}%</li>
+        </ul>
+      </article>
+
+      {% endfor %}
+
+  
+    </section>
+
+
+
+
+
+  </body>
+
+{% endblock %}
