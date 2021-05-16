@@ -464,7 +464,7 @@ def stats(region, sum1name, sum2name, queue, season):
 
     #Api Key to update
 
-    api = RiotAPI('RGAPI-d11e0daa-1612-4174-b159-276f535df131', RiotConsts.REGIONS[region], queue, season)
+    api = RiotAPI('ENTER API KEY HERE', RiotConsts.REGIONS[region], queue, season)
 
 
 
